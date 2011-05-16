@@ -1,0 +1,8 @@
+---
+layout: default
+---
+
+{% for category in page.categories %}
+<h2><a href="/categories/{{ category | slugize }}">{{ category }}</a></h2>
+<strong>{{ site.categories[category].length }} posts</strong>
+{% endfor %}

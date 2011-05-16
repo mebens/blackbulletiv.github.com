@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% if page.title %}
+  <title>{{ page.title }} - {{ site.title }}</title>
+  {% else %}
+  <title>{{ site.title }}</title>
+  {% endif %}
+  
+  <link href="/css/blueprint/screen.css" type="text/css" rel="stylesheet" />
+  <!--[if lt IE 8]> <link href="/css/blueprint/ie.css" type="text/css" rel="stylesheet" /> <![endif]-->  
+  <link href="/css/railscasts.css" type="text/css" rel="stylesheet" />
+  <link href="/css/site.css" type="text/css" rel="stylesheet" />
+  
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/site.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div id="main" {% unless page.no_sidebar %} class="span-18" {% endunless %}>
+      {{ content }}
+    </div>
+    
+    {% unless page.no_sidebar %}
+    <div id="sidebar" class="span-6 last">
+      {% include sidebar.html %}
+    </div>
+    {% endunless %}
+  </div>
+</body>
+</html>
