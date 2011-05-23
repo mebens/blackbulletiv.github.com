@@ -1,5 +1,5 @@
 module Jekyll
-  class YoutubeTag < Liquid::Tag
+  class Youtube < Liquid::Tag
     @@width = 640
     @@height = 510
     
@@ -14,4 +14,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('youtube', Jekyll::YoutubeTag)
+Liquid::Template.register_tag('youtube', Jekyll::Youtube)
