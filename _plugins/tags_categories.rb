@@ -27,7 +27,7 @@ module Jekyll
     def initialize(site, base, dir)
       super site, base, dir, 'categories'
       self.data['title'] = site.config['categories_title'] || 'Categories'
-      self.data['categories'] = site.categories.keys
+      self.data['categories'] = site.categories.keys.sort
     end
   end
   
@@ -44,21 +44,13 @@ module Jekyll
     def initialize(site, base, dir)
       super site, base, dir, 'tags'
       self.data['title'] = site.config['tags_title'] || 'Tags'
-      self.data['tags'] = site.categories.keys
+      self.data['tags'] = site.tags.keys.sort
     end
   end
   
   class Site
-    def process
-      self.reset
-      self.read
-      self.generate
-      self.render
-      self.generate_tags_categories # this must come after render
-      self.cleanup
-      self.write
-    end
-    
+    # generate_tags_categories is called by the custom process function in site_process.rb
+        
     def generate_tags_categories
       throw "No 'category' layout found." unless self.layouts.key? 'category'
       throw "No 'categories' layout found." unless self.layouts.key? 'categories'
