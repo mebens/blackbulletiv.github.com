@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% for tag in page.tags %}
+  <h2><a href="/tags/{{ tag | slugize }}">{{ tag }}</a></h2>
+  <h6>{{ site.categories[tag] | length }} posts</h6>
+  
+  <h4>Latest Posts</h4>
+  <ul>
+    {% for post in site.categories[tag] limit: 5 %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endfor %}

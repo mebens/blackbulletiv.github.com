@@ -18,12 +18,12 @@
 
 <body>
   <div class="container">
-    <div id="main" {% unless page.no_sidebar %} class="span-18" {% endunless %}>
+    <div id="main" {% unless page.no_sidebar %} class="span-17" {% endunless %}>
       {{ content }}
     </div>
     
     {% unless page.no_sidebar %}
-    <div id="sidebar" class="span-6 last">
+    <div id="sidebar" class="span-6 push-1 last">
       {% include sidebar.html %}
     </div>
     {% endunless %}
