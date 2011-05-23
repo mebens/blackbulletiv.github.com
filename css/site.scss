@@ -1,0 +1,84 @@
+---
+---
+
+/* Variables */
+$base-h-margin: 0.5em;
+
+body {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 { margin-bottom: 0.2em; }
+h1 { margin-top: $base-h-margin; }
+h2 { margin-top: $base-h-margin + 0.1; }
+h3 { margin-top: $base-h-margin + 0.2; }
+h4, h5 { margin-top: $base-h-margin + 0.3; }
+.post h1 { font-size: 36px; }
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+}
+
+/* Sidebar */
+
+.sidebar-module {
+  margin: 20px 0;
+  
+  .title {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    background-color: #6ECFFF;
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+  }
+}
+
+/* Code */
+
+@mixin code-block-bg {
+  background-color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+pre, code, tt {
+  font: Monaco, 'andale mono', 'lucida console', monospace;
+}
+
+pre {
+  line-height: 1.2;
+  margin: 0;
+  code { @include code-block-bg; }
+}
+
+code, tt {
+  color: #222;
+  padding: 1px 3px;
+  border-radius: 3px;
+  background-color: #EEE;
+}
+
+.highlight {
+  margin: 1em 0;
+  padding: 10px;
+  border-radius: 5px;
+  background: none repeat scroll 0 0 #222222;
+  overflow: auto;
+  pre code { @include code-block-bg; }
+}
+
+/* Little Classes */
+
+.h1-5 { font-size: 2.5em; } /* Make a h2 look like a "h1.5" */
+.low-top { margin-top: 0.4em; }
+.large-bottom { margin-bottom: 0.7em; }

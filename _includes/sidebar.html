@@ -1,4 +1,13 @@
 <div class="sidebar-module">
+  <div class="title">Latest Posts</div>
+  
+  {% for post in site.posts limit: 5 %}
+    <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+    <span class="quiet low-top">{{ post.date | format_date }}</span>
+  {% endfor %}
+</div>
+
+<div class="sidebar-module">
   <div class="title">Tag Cloud</div>
   {% tag_cloud %}
 </div>
