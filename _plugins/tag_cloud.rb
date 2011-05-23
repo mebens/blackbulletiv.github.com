@@ -1,6 +1,6 @@
 module Jekyll
   class TagCloud < Liquid::Tag
-    safe true
+    safe = true
     
     def render(context)
       tags = context.registers[:site].tags.map do |tag| 

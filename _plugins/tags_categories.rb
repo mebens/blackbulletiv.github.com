@@ -59,7 +59,7 @@ module Jekyll
       self.write
     end
     
-    def generate_categories_tags
+    def generate_tags_categories
       throw "No 'category' layout found." unless self.layouts.key? 'category'
       throw "No 'categories' layout found." unless self.layouts.key? 'categories'
       throw "No 'tag' layout found." unless self.layouts.key? 'tag'
