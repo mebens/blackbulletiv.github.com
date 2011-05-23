@@ -1,5 +1,7 @@
 module Jekyll
   class TagCloud < Liquid::Tag
+    @@max_size = 280
+    @@min_size = 75
     safe = true
     
     def render(context)
@@ -16,7 +18,7 @@ module Jekyll
       max_count = tags.max { |a, b| a[:posts].length <=> b[:posts].length }[:posts].length
 
       weights = tags.inject({}) do |result, tag|
-        result[tag[:title]] = (((tag[:posts].length - min_count) * (280 - 75)) / (max_count - min_count)) + 75
+        result[tag[:title]] = (tag[:posts].length - min_count) * (@@max_size - @@min_size) / (max_count - min_count) + @@min_size
         result
       end
 
