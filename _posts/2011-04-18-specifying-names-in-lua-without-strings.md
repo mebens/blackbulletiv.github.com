@@ -24,7 +24,7 @@ class(MyClass)
 
 ## Finding When `class` is Called
 
-Lua stores all globals in a table called _G, which itself is a global (`_G._G._G == _G`). We'll make use of this by using a metatable with an __index function on _G:
+Lua stores all globals in a table called `_G`, which itself is a global (`_G._G._G == _G`). We'll make use of this by using a metatable with an `__index` function on `_G`:
 
 {% highlight lua %}
 local _called
@@ -44,13 +44,13 @@ setmetatable(_G, {
 })
 {% endhighlight %}
 
-What's happening here? If the caller asks for a function called `class` we'll set a variable called _called to true. This lets us know that `class` has been indexed. We then use this in the elseif statement and if it's true we'll return the key, which is a string of the name used; we also set _called to false. Finally, we revert to using `rawget` with _G and the key.
+What's happening here? If the caller asks for a function called `class` we'll set a variable named `_called` to true. This lets us know that `class` has been indexed. We then use this in the elseif statement and if it's true we'll return the key, which is a string of the name used; we also set `_called` to false. Finally, we revert to using `rawget` with `_G` and the key.
 
 There's one catch with this approach. If the user doesn't actually call `class`, but instead passes it as an argument or something, bad things will happen. The next time they index something that isn't there, they'll get a string of the name used, which will most likely stuff their code up. This is what I mean by "hackish".
 
-## The _class function
+## The `_class` function
 
-We've renamed the class function to _class, otherwise __index wouldn't get called. This is because __index is only called if the requested name doesn't exist in the table. For demonstration purposes, we'll just print out the name given:
+We've renamed the class function to `_class`, otherwise `__index` wouldn't get called. This is because `__index` is only called if the requested name doesn't exist in the table. For demonstration purposes, we'll just print out the name given:
 
 {% highlight lua %}
 function _class(name, otherStuff)
@@ -66,4 +66,3 @@ class(FooBar)
 {% endhighlight %}
 
 "FooBar" should be printed out. Ah the flexibility of Lua! Thanks for reading!
-

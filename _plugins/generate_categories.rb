@@ -34,6 +34,16 @@ module Jekyll
   end
   
   class Site
+    def process
+      self.reset
+      self.read
+      self.generate
+      self.render
+      self.generate_categories # this must come after render
+      self.cleanup
+      self.write
+    end
+    
     def generate_categories
       if self.layouts.key? 'category'
         dir = self.config['category_dir'] || 'categories'
@@ -54,14 +64,5 @@ module Jekyll
         page.write(self.dest)
         self.pages << page
       end
-  end
-  
-  class GenerateCategories < Generator
-    safe true
-    priority :low
-
-    def generate(site)
-      site.generate_categories
-    end
   end
 end
