@@ -1,4 +1,5 @@
 require 'sass'
+require 'growl'
 
 module Jekyll
   class SassConverter < Converter
@@ -15,8 +16,9 @@ module Jekyll
     
     def convert(content)
       begin
-        Sass::Engine.new(content, :syntax => :scss).render
+        Sass::Engine.new(content, :syntax => :scss, :style => :compressed).render
       rescue StandardError => e
+        Growl.notify "Sass Error: #{e.message}", :title => "Jekyll"
         puts "[Sass Error] #{e.message}"
       end
     end

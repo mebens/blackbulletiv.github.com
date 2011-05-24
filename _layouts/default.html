@@ -2,9 +2,9 @@
 <html>
 <head>
   {% if page.title %}
-  <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
   {% else %}
-  <title>{{ site.title }}</title>
+    <title>{{ site.title }}</title>
   {% endif %}
   
   <link href="/css/blueprint/screen.css" type="text/css" rel="stylesheet" />
@@ -18,14 +18,14 @@
 
 <body>
   <div class="container">
+    {% include header.html %}
+    
     <div id="main" {% unless page.no_sidebar %} class="span-17" {% endunless %}>
       {{ content }}
     </div>
     
     {% unless page.no_sidebar %}
-      <div id="sidebar" class="span-6 push-1 last">
-        {% include sidebar.html %}
-      </div>
+      {% include sidebar.html %}
     {% endunless %}
   </div>
 </body>

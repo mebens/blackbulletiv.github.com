@@ -34,6 +34,7 @@ function math.clamp(x, min, max)
     return max
   else
     return x
+  end
 end
 {% endhighlight %}
 

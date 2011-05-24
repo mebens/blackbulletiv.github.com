@@ -1,15 +1,26 @@
 ---
 ---
 
-/* Variables */
+// Variables and General Mixins
+
 $base-h-margin: 0.5em;
+$main-color: #99D3F2;
+
+@mixin transition($type, $time, $ease) {
+  -webkit-transition: $type $time $ease;
+  transition: $type $time $ease;
+}
+
+// Main Elements
 
 body {
   font-size: 14px;
   line-height: 1.4;
+  text-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Typography */
+// Typography
 
 h1, h2, h3, h4, h5, h6 { margin-bottom: 0.2em; }
 h1 { margin-top: $base-h-margin; }
@@ -24,10 +35,59 @@ p {
 
 a {
   text-decoration: none;
-  -webkit-transition: all .2s linear;
+  @include transition(all, 0.2s, linear);
 }
 
-/* Sidebar */
+// Header
+
+#header {
+  .title {
+    margin: 10px 0 20px 0;
+    text-shadow:
+      #BBB -1px -1px 0,
+      #AAA -2px -2px 0,
+      #999 -3px -3px 0,
+      #888 -4px -4px 0;
+    
+    font: {
+      size: 3.5em;
+      weight: bold;
+    }
+    
+    a {
+      color: #000;
+      &:hover { color: #333; }
+    }
+  }
+  
+  #menu {
+    text-align: right;
+    
+    ul {
+      list-style-type: none;
+      margin-top: 2px;
+      
+      li {
+        display: inline;
+        padding: 10px 8px 5px 8px;
+        margin: 0 5px;
+        background-color: $main-color;
+        border-radius: 5px;
+        font-weight: bold;
+        
+        @include transition(background-color, 0.2s, linear);
+        &:hover { background-color: darken($main-color, 15%); }
+        
+        a {
+          color: #000;
+          &:hover { color: #000; }
+        }        
+      }
+    }
+  }
+}
+
+// Sidebar
 
 .sidebar-module {
   margin: 20px 0;
@@ -35,17 +95,20 @@ a {
   .title {
     padding: 5px 10px;
     margin-bottom: 5px;
-    background-color: #6ECFFF;
+    background-color: $main-color;
     border-radius: 5px;
-    font-size: 24px;
-    font-weight: bold;
     text-align: right;
+    
+    font: {
+      size: 24px;
+      weight: bold;
+    }
   }
 }
 
-/* Code */
+// Code
 
-@mixin code-block-bg {
+@mixin code-block {
   background-color: inherit;
   padding: 0;
   border-radius: 0;
@@ -53,12 +116,14 @@ a {
 
 pre, code, tt {
   font: Monaco, 'andale mono', 'lucida console', monospace;
+  text-shadow: none;
+  -webkit-font-smoothing: initial;
 }
 
 pre {
   line-height: 1.2;
   margin: 0;
-  code { @include code-block-bg; }
+  code { @include code-block; }
 }
 
 code, tt {
@@ -74,11 +139,11 @@ code, tt {
   border-radius: 5px;
   background: none repeat scroll 0 0 #222222;
   overflow: auto;
-  pre code { @include code-block-bg; }
+  pre code { @include code-block; }
 }
 
-/* Little Classes */
+// Little Classes
 
-.h1-5 { font-size: 2.5em; } /* Make a h2 look like a "h1.5" */
+.h1-5 { font-size: 2.5em; } // Make a h2 look like a "h1.5"
 .low-top { margin-top: 0.4em; }
 .large-bottom { margin-bottom: 0.7em; }
