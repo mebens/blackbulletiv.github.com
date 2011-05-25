@@ -1,8 +1,6 @@
 ---
-layout: default
+layout: page
 ---
-
-<h1 class="large-bottom">{{ page.title }}</h1>
 
 {% for tag in page.tags %}
   <h4 class="low-top"><a href="/tags/{{ tag | slugize }}">{{ tag }}</a> ({{ site.tags[tag] | length }})</h4>
