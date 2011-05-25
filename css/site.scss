@@ -11,6 +11,12 @@ $main-color: #99D3F2;
   transition: $type $time $ease;
 }
 
+@mixin border-radius($length) {
+  border-radius: $length;
+  -webkit-border-radius: $length;
+  -moz-border-radius: $length;
+}
+
 // Main Elements
 
 body {
@@ -65,26 +71,37 @@ a {
     
     ul {
       list-style-type: none;
-      margin-top: 2px;
+      margin: 2px 0 0 0;
       
       li {
         display: inline;
-        padding: 10px 8px 5px 8px;
+        padding: 10px 0 5px 0;
         margin: 0 5px;
         background-color: $main-color;
-        border-radius: 5px;
         font-weight: bold;
         
+        @include border-radius(5px);
         @include transition(background-color, 0.2s, linear);
         &:hover { background-color: darken($main-color, 15%); }
+        &.last { margin-right: 0; }
         
         a {
+          padding: 10px 12px 5px 12px; // top/bottom padding doesn't do anything visually, but is there to create a bigger clicking area
           color: #000;
           &:hover { color: #000; }
         }        
       }
     }
   }
+} // #header
+
+// Footer
+
+#footer {
+  margin: 20px 0 10px 0;
+  padding: 10px;
+  background-color: $main-color;
+  @include border-radius(5px);
 }
 
 // Sidebar
@@ -96,7 +113,7 @@ a {
     padding: 5px 10px;
     margin-bottom: 5px;
     background-color: $main-color;
-    border-radius: 5px;
+    @include border-radius(5px);
     text-align: right;
     
     font: {
@@ -111,7 +128,7 @@ a {
 @mixin code-block {
   background-color: inherit;
   padding: 0;
-  border-radius: 0;
+  @include border-radius(0);
 }
 
 pre, code, tt {
@@ -129,14 +146,14 @@ pre {
 code, tt {
   color: #222;
   padding: 1px 3px;
-  border-radius: 3px;
+  @include border-radius(3px);
   background-color: #EEE;
 }
 
 .highlight {
   margin: 1em 0;
   padding: 10px;
-  border-radius: 5px;
+  @include border-radius(5px);
   background: none repeat scroll 0 0 #222222;
   overflow: auto;
   pre code { @include code-block; }

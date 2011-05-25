@@ -20,13 +20,15 @@
   <div class="container">
     {% include header.html %}
     
-    <div id="main" {% unless page.no_sidebar %} class="span-17" {% endunless %}>
+    <div id="main" class="span-{% if page.no_sidebar %}24{% else %}17{% endif %}">
       {{ content }}
     </div>
     
     {% unless page.no_sidebar %}
       {% include sidebar.html %}
     {% endunless %}
+    
+    {% include footer.html %}
   </div>
 </body>
 </html>
