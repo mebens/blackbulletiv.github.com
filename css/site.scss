@@ -123,6 +123,14 @@ a {
   }
 }
 
+// Bread Crumbs
+
+#bread-crumbs {
+  @extend .quite;
+  font-size: 11px;
+  margin: 5px 0 10px 0;
+}
+
 // Code
 
 @mixin code-block {

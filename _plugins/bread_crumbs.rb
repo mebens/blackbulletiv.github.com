@@ -1,14 +1,15 @@
 module Jekyll
-  class BreadCrumbs < Liquid::Tag
-    def render(context)
-      pieces = context.registers[:site].page.url.split(/\//)
-      site_url = context.registers[:site].url
-      code = %(<a href="#{site_url}">Home</a>)
+  module Filters
+    def bread_crumbs(url)
+      site_url = "/"
+      code = %(<a href="#{site_url}">Home</a> &raquo;)
+      pieces = url.split(/\//).reject! { |s| s.empty? || s == "index.html" }
+      pieces.pop
       
-      pieces.each_with_index do |i, s|
+      pieces.each_with_index do |s, i|
         link = site_url
-        i.downto(0) { |n| link << "/#{pieces[n]}" }
-        code << %(&raquo; <a href="#{link}">#{s.capitalize}</a>) # I hope we can do better than capitalize...
+        (i - 1).downto(0) { |n| link << "/#{pieces[n]}" }
+        code << %( <a href="#{link}">#{s.capitalize}</a> &raquo;) # I hope we can do better than capitalize...
       end
       
       code
