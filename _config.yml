@@ -7,3 +7,7 @@ permalink: /:year/:month/:day/:title
 paginate: 10
 title: NovaFusion
 url: http://localhost:8888
+github_user: BlackBulletIV
+not_projects:
+  rails: true
+    middleclass: true
