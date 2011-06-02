@@ -9,6 +9,7 @@ module Jekyll
       self.data['docs'] = info['docs'] == 'wiki' ? "#{self.data['repo']}/wiki" : info['docs'] if info['docs']
       self.data['description'] = info['description']
       
+      # this stuff is bit hackish, but it works
       readme = `curl #{self.data['repo']}/raw/master/README.md` # this will fail if README.md isn't present
       readme.gsub!(/\`{3} ?(\w*)\n(.+)\n\`{3}/m, "{% highlight \\1 %}\n\\2\n{% endhighlight %}")
       readme = Liquid::Template.parse(readme).render({}, :filters => [Jekyll::Filters], :registers => { :site => site })

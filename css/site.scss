@@ -3,7 +3,7 @@
 
 // Variables and General Mixins
 
-$base-h-margin: 0.5em;
+$base-h-margin: 0.6em;
 $main-color: #99D3F2;
 
 @mixin transition($type, $time, $ease) {
@@ -29,10 +29,10 @@ body {
 // Typography
 
 h1, h2, h3, h4, h5, h6 { margin-bottom: 0.2em; }
-h1 { margin-top: $base-h-margin; }
-h2 { margin-top: $base-h-margin + 0.1; }
-h3 { margin-top: $base-h-margin + 0.2; }
-h4, h5 { margin-top: $base-h-margin + 0.3; }
+h1 { margin-top: $base-h-margin + 0.2; }
+h2 { margin-top: $base-h-margin + 0.15; }
+h3 { margin-top: $base-h-margin + 0.1; }
+h4, h5 { margin-top: $base-h-margin; }
 .post h1 { font-size: 36px; }
 
 p {
@@ -42,6 +42,10 @@ p {
 a {
   text-decoration: none;
   @include transition(all, 0.2s, linear);
+}
+
+ul, ol {
+  margin-top: 1.5em;
 }
 
 // Header
@@ -215,6 +219,10 @@ code, tt {
 
 .readme {
   margin-top: 20px;
+  h1 { font-size: 2.2em; }
+  h2 {font-size: 1.9em; }
+  h3 {font-size: 1.6em; }
+  h4 {font-size: 1.3em; }
 }
 
 // Little Classes
