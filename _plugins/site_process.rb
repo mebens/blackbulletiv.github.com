@@ -10,7 +10,7 @@ module Jekyll
       
       # these must come after render
       self.generate_tags_categories
-      #self.generate_projects
+      self.generate_projects
       
       self.cleanup
       self.write

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% for project in page.projects %}
+  <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+  <span class="large-para">{{ project.version }} - <a href="{{ project.repo }}">Repository</a></span><br />
+  {% if project.description %}<p class="low-top">{{ project.description }}</p>{% endif %}
+{% endfor %}

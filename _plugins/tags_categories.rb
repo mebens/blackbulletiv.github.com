@@ -1,4 +1,4 @@
-# Thanks to http://recursive-design.com/projects/jekyll-plugins/ for much of the code
+# Thanks to http://recursive-design.com/projects/jekyll-plugins/ for the code off which this is based
 
 module Jekyll
   class Category < CustomPage
@@ -40,13 +40,11 @@ module Jekyll
         
     def generate_tags_categories
       throw "No 'category' layout found." unless self.layouts.key? 'category'
-      throw "No 'categories' layout found." unless self.layouts.key? 'categories'
       throw "No 'tag' layout found." unless self.layouts.key? 'tag'
-      throw "No 'tags' layout found." unless self.layouts.key? 'tags'
       
       # Categories
       dir = self.config['category_dir'] || 'categories'
-      write_page Categories.new(self, self.source, dir)
+      write_page Categories.new(self, self.source, dir) if self.layouts.key? 'categories'
       
       self.categories.keys.each do |category|
         write_page Category.new(self, self.source, File.join(dir, category.slugize), category)
@@ -54,7 +52,7 @@ module Jekyll
       
       # Tags
       dir = self.config['tag_dir'] || 'tags'
-      write_page Tags.new(self, self.source, dir)
+      write_page Tags.new(self, self.source, dir) if self.layouts.key? 'tags'
       
       self.tags.keys.each do |tag|
         write_page Tag.new(self, self.source, File.join(dir, tag.slugize), tag)

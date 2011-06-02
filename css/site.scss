@@ -167,6 +167,56 @@ code, tt {
   pre code { @include code-block; }
 }
 
+// Projects
+
+.project-links {
+  text-align: right;
+}
+
+.project-download {
+  color: #000300;
+  background-color: #00910A;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  
+  @include transition(background-color, 0.2s, linear);
+  @include border-radius(10px);
+  
+  box-shadow:
+    1px 1px 0 0 #014D06,
+    2px 2px 0 0 #014D06,
+    3px 3px 0 0 #014D06,
+    4px 4px 0 0 #014D06;
+    
+  -webkit-box-shadow:
+    1px 1px 0 0 #014D06,
+    2px 2px 0 0 #014D06,
+    3px 3px 0 0 #014D06,
+    4px 4px 0 0 #014D06;
+  
+  -moz-box-shadow:
+    1px 1px 0 0 #014D06,
+    2px 2px 0 0 #014D06,
+    3px 3px 0 0 #014D06,
+    4px 4px 0 0 #014D06;
+  
+  &:hover { background-color: #00B00C; }
+  &:active {
+    box-shadow: 1px 1px 0 0 #014D06;
+    -webkit-box-shadow: 1px 1px 0 0 #014D06;    
+    -moz-box-shadow: 1px 1px 0 0 #014D06;
+    top: 3px;
+    left: 3px;
+  }
+}
+
+.readme {
+  margin-top: 20px;
+}
+
 // Little Classes
 
 .push-1-5 { margin: 0 -60px 1.5em 60px; }
