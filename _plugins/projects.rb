@@ -3,7 +3,7 @@ module Jekyll
     def initialize(site, base, dir, name, info)
       super site, base, dir, 'project'
       self.data['title'] = info['title'] || name
-      self.data['version'] = info['version']
+      self.data['version'] = info['version_title'] || info['version']
       self.data['repo'] = "https://github.com/#{site.config['github_user']}/#{name}"
       self.data['download'] = "#{self.data['repo']}/zipball/#{info['version'] || 'master'}"
       self.data['docs'] = info['docs'] == 'wiki' ? "#{self.data['repo']}/wiki" : info['docs'] if info['docs']
