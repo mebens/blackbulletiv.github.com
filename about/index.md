@@ -24,3 +24,9 @@ For other activities, I like bike riding on my mountain bike; I love the mix of 
 As for my spiritual beliefs, I'm a Christian who believes in God and His Son. It's this that keeps me going, and affects every decision I make. I have a deep interest in topics related to God, and enjoy discussing them.
 
 If any have any questions, don't hesitate to contact me.
+
+## This Website
+
+This is my personal space on the web, which I use largely for pages about my [projects](/projects), and to write [posts](/blog) on various topics. For the license of the content on this website, please see the [license page](/license).
+
+One cool thing is that this website is open source, so you get to see all the code behind it. Check out its [repository](https://github.com/BlackBulletIV/blackbulletiv.github.com) for more details.
