@@ -5,8 +5,8 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title
 paginate: 10
-title: NovaFusion
-url: http://localhost:8888
+title: Michael Ebens
+url: http://nova-fusion.com
 github_user: BlackBulletIV
 projects:
   strong:

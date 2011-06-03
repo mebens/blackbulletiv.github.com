@@ -11,7 +11,7 @@ tags:
 I though I'd just write a quick tutorial on how I make a dynamic copyright for my websites. If you don't know what a function does in the code, look it up on the PHP manual.
 
 {% highlight php %}
-echo strftime('%Y', time());
+<?php echo strftime('%Y', time()); ?>
 {% endhighlight %}
 
 That's the year generating code. It's just grabbing the year from the current timestamp. So we could do something like this in the copyright:
@@ -23,10 +23,12 @@ That's the year generating code. It's just grabbing the year from the current ti
 You might want to wrap around the code in a helper function:
 
 {% highlight php %}
+<?php
 function year()
 {
     return strftime('%Y', time());
 }
+?>
 {% endhighlight %}
 
 Anyway, that's all folks.
