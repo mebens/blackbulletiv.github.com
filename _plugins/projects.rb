@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 module Jekyll
   class Project < CustomPage
     def initialize(site, base, dir, name, info)
@@ -11,7 +13,8 @@ module Jekyll
       
       # this stuff is bit hackish, but it works
       readme = `curl #{self.data['repo']}/raw/master/README.md` # this will fail if README.md isn't present
-      readme.gsub!(/\`{3} ?(\w*)\n(.+)\n\`{3}/m, "{% highlight \\1 %}\n\\2\n{% endhighlight %}")
+      readme.gsub!(/\`{3} ?(\w+)\n(.+?)\n\`{3}/m, "{% highlight \\1 %}\n\\2\n{% endhighlight %}")
+      readme.gsub!(/LÖVE/, 'L&#214;VE')
       readme = Liquid::Template.parse(readme).render({}, :filters => [Jekyll::Filters], :registers => { :site => site })
       self.data['readme'] = RDiscount.new(readme).to_html
     end
