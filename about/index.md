@@ -17,7 +17,7 @@ I've used [Joomla](http://joomla.org) and [WordPress](http://wordpress.org) to c
 
 ## Me
 
-My name's Michael, I'm a web developer, programmer, and freelancer, living in Victoria, Australia. I love technology, mainly because of the awesome it lets you create (without the need of a big crew), the interactivity that's possible, and the ability to distribute your products to millions of people around the world. I love to learn new things, and there's certainly a lot to learn in technology! (If you want to learn more about what I can do with technology, head over to the skills page)
+My name's Michael, I'm a web developer, programmer, and freelancer (under the company name NovaFusion), living in Victoria, Australia. I love technology, mainly because of the awesome it lets you create (without the need of a big crew), the interactivity that's possible, and the ability to distribute your products to millions of people around the world. I love to learn new things, and there's certainly a lot to learn in technology! (If you want to learn more about what I can do with technology, head over to the skills page)
 
 For other activities, I like bike riding on my mountain bike; I love the mix of speed, avoiding obstacles (mainly cars), and navigation. I've been playing the guitar for a little while as a musical instrument, and I'm picking the piano/keyboard lately. I enjoy studying science, especially when it's related to physical things like matter, energy, time and such. Finally, I enjoy using mathematics to solve problems in life, mainly for my programming tasks.
 

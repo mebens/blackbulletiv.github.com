@@ -4,6 +4,8 @@ module Jekyll
   class Project < CustomPage
     def initialize(site, base, dir, name, info)
       super site, base, dir, 'project'
+      puts "Building project: #{name}"
+      
       self.data['title'] = info['title'] || name
       self.data['version'] = info['version_title'] || info['version']
       self.data['repo'] = "https://github.com/#{site.config['github_user']}/#{name}"
@@ -14,7 +16,7 @@ module Jekyll
       # this stuff is bit hackish, but it works
       readme = `curl #{self.data['repo']}/raw/master/README.md` # this will fail if README.md isn't present
       readme.gsub!(/\`{3} ?(\w+)\n(.+?)\n\`{3}/m, "{% highlight \\1 %}\n\\2\n{% endhighlight %}")
-      readme.gsub!(/LÖVE/, 'L&#214;VE')
+      readme.gsub!(/Ö/, '&#214;') # so that I can use LÖVE in my READMEs
       readme = Liquid::Template.parse(readme).render({}, :filters => [Jekyll::Filters], :registers => { :site => site })
       self.data['readme'] = RDiscount.new(readme).to_html
     end
