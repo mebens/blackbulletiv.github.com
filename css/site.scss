@@ -33,7 +33,6 @@ h1 { margin-top: $base-h-margin + 0.2; }
 h2 { margin-top: $base-h-margin + 0.15; }
 h3 { margin-top: $base-h-margin + 0.1; }
 h4, h5 { margin-top: $base-h-margin; }
-.post h1 { font-size: 36px; }
 
 p {
   margin: 1em 0;
@@ -249,6 +248,14 @@ code, tt {
   }
 }
 */
+
+// Posts
+
+.post {
+  h1 { font-size: 36px; }
+  .content { margin-bottom: 10px; }
+  .next-prev-nav { text-align: center; }
+}
 
 // Comments
 

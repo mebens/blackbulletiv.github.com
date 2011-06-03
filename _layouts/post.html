@@ -13,7 +13,34 @@ layout: default
     {{ content }}
   </div>
   
+  <hr />
   
+  {% if page.tags %}
+    Tagged in
+    {% for tag in page.tags %}
+      <strong><a href="/tags/{{ tag | slugize }}">{{ tag }}</a></strong>
+    {% endfor %}
+    <br />
+  {% endif %}
+  
+  <div class="next-prev-nav low-top">
+    {% if page.previous.url %}
+      &laquo;&nbsp;<a href="{{ page.previous.url }}/" rel="previous" title="{{ page.previous.title }}">{{ page.previous.title }}</a>
+    {% endif %}
+  
+    {% if page.previous.url %}
+      {% if page.next.url %}
+        |
+      {% endif %}
+    {% endif %}
+    
+  
+    {% if page.next.url %}
+      <a href="{{ page.next.url }}/" rel="next" title="{{ page.next.title }}">{{ page.next.title }}</a>&nbsp;&raquo;
+    {% endif %}
+  
+    <br />
+  </div>
   
   {% unless page.no_comments %}
     {% include comments.html %}
