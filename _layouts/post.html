@@ -18,7 +18,7 @@ layout: default
   {% if page.tags %}
     Tagged in
     {% for tag in page.tags %}
-      <strong><a href="/tags/{{ tag | slugize }}">{{ tag }}</a></strong>
+      <strong><a href="/tags/{{ tag | slugize }}">{{ tag }}</a></strong>{% unless forloop.last %}, {% endunless %}
     {% endfor %}
     <br />
   {% endif %}
