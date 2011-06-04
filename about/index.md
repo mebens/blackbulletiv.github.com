@@ -29,4 +29,4 @@ If any have any questions, don't hesitate to contact me.
 
 This is my personal space on the web, which I use largely for pages about my [projects](/projects), and to write [posts](/blog) on various topics. For the license of the content on this website, please see the [license page](/license).
 
-One cool thing is that this website is open source, so you get to see all the code behind it. Check out its [repository](https://github.com/BlackBulletIV/blackbulletiv.github.com) for more details.
+One cool thing is that this website is open source, so you get to see all the code behind it. Check out its [repository](https://github.com/BlackBulletIV/nova-fusion.com) for more details.
