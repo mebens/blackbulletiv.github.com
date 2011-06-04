@@ -1,3 +1,5 @@
+# I think I should calculate this once, instead of on every instance of the tag_cloud tag
+
 module Jekyll
   class TagCloud < Liquid::Tag
     @@max_size = 280
