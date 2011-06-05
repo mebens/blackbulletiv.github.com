@@ -5,12 +5,12 @@ module Jekyll
     safe = true
     
     def render(context)
-      @@cloud ||= generate_cloud
+      @@cloud ||= generate_cloud(context)
     end
     
     private
     
-      def generate_cloud
+      def generate_cloud(context)
         tags = context.registers[:site].tags.map do |tag| 
           { 
             :title => tag[0], 
