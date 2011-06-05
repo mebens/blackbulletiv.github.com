@@ -168,7 +168,7 @@ code, tt {
   padding: 10px;
   @include border-radius(5px);
   background: none repeat scroll 0 0 #222222;
-  color: #EDEDED;
+  color: #F0F0F0;
   overflow: auto;
   pre code { @include code-block; }
 }
