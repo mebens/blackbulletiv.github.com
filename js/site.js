@@ -11,5 +11,11 @@ function getEmail()
 function removeLinkListeners()
 {
   var links = document.getElementsByTagName('a');
-  for (var i = 0; i < links.length; links[i++].removeEventListener('click', clicky.outbound));
+  for (var i = 0; i < links.length; i++)
+  {
+    if (links[i].classList.contains('project-download-link'))
+    {
+      links[i].removeEventListener('mousedown', clicky.outbound);
+    }
+  }
 }

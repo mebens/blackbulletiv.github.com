@@ -8,7 +8,10 @@ layout: default
 </div>
 
 <div class="project-links span-5 last">
-  <a href="{{ page.download }}"><div class="project-download">Download</div></a>
+  <a href="{{ page.download }}" class="project-download-link">
+    <div class="project-download">Download</div>
+  </a>
+  
   <h3><a href="{{ page.repo }}">GitHub Repository</a></h3>
   
   {% if page.docs %}
