@@ -5,7 +5,7 @@ title: License
 
 ## This Website
 
-This website's code (HTML/CSS/JavaScript, as well as Ruby because this website is powered by [Jekyll](https://github.com/mojombo/jekyll/)) is open source, and available under the [MIT license](http://www.opensource.org/licenses/mit-license.php); see the [LICENSE file](https://github.com/BlackBulletIV/novafusion.github.com/blob/master/LICENSE.txt) for that. You can obtain this code from its [repository](https://github.com/BlackBulletIV/nova-fusion.com); if you do use it, I'd appreciate a reference, but it's not required.
+This website's code (HTML/CSS/JavaScript, as well as Ruby because this website is powered by [Jekyll](https://github.com/mojombo/jekyll/)) is open source, and available under the [MIT license](http://www.opensource.org/licenses/mit-license.php); see the [LICENSE file](https://github.com/BlackBulletIV/blackbulletiv.github.com/blob/master/LICENSE.txt) for that. You can obtain this code from its [repository](https://github.com/BlackBulletIV/blackbulletiv.github.com); if you do use it, I'd appreciate a reference, but it's not required.
 
 ## Code Examples
 
