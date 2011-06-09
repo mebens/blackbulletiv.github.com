@@ -267,6 +267,33 @@ code, tt {
   margin-top: 20px;
 }
 
+// Music
+
+.song {
+  background-color: #E8E8E8;
+  padding: 5px 10px;
+  margin: 20px 0 5px 0;
+  @include border-radius(8px);
+  
+  box-shadow:
+    1px 1px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0;
+  
+  -webkit-box-shadow:
+    1px 1px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0;
+
+  -moz-box-shadow:
+    1px 1px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0,
+    2px 2px 0 0 #B0B0B0;
+}
+
 // Little Classes
 
 .push-1-5 { margin: 0 -60px 1.5em 60px; }
