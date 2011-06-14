@@ -14,7 +14,6 @@ module Jekyll
   class Categories < CustomPage
     def initialize(site, base, dir)
       super site, base, dir, 'categories'
-      self.data['title'] = site.config['categories_title'] || 'Categories'
       self.data['categories'] = site.categories.keys.sort
     end
   end
@@ -31,7 +30,6 @@ module Jekyll
   class Tags < CustomPage
     def initialize(site, base, dir)
       super site, base, dir, 'tags'
-      self.data['title'] = site.config['tags_title'] || 'Tags'
       self.data['tags'] = site.tags.keys.sort
     end
   end

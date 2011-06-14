@@ -1,5 +1,5 @@
-//---
-//---
+---
+---
 
 // Variables and General Mixins
 
@@ -38,9 +38,11 @@ p {
   margin: 1em 0;
 }
 
-a {
+a, a code {
+  color: #06C;
   text-decoration: none;
   @include transition(all, 0.2s, linear);
+  &:hover { color: #09F; }
 }
 
 ul, ol {
