@@ -184,7 +184,7 @@ For getting:
 {% highlight lua %}
 for i = 1, 1000000 do
   -- this is where we need that assignment
-  -- lua won't accept just the code 't.layer'
+  -- lua won't accept just the code 't.foo'
   local a = t.foo
 end
 {% endhighlight %}
@@ -218,3 +218,5 @@ sys	0m0.004s
 So as you can see, not only does this method create a much nicer API (unless you love using get* and set* methods), but also _improves_ speed quite a lot, which I didn't expect. And take into consideration, that not only does this improve speed a lot on the front of getter and setter methods, but also allows you to leave to properties that don't need getters and setters, just as plain properties; this will improve speed even more. So it's a win both ways.
 
 Enjoy!
+
+**EDIT:** In the comments, Josh has noted that the reason why `t:getFoo()` is slower is because it's going through the same metatable as `t.foo`, invoking a `rawget` call. Without this, `t:getFoo()` is actually a little faster.
