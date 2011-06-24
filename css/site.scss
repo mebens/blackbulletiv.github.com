@@ -17,12 +17,22 @@ $main-color: #99D3F2;
   -moz-border-radius: $length;
 }
 
+@mixin background-gradient($from, $to) {
+  background: $from;
+  background: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+  background: -webkit-linear-gradient($from, $to);
+  background: -moz-linear-gradient(center top, $from 0%, $to 100%);
+  background: -moz-gradient(center top, $from 0%, $to 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$from,endColorstr=$to);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$from,endColorstr=$to)"; // don't think this works
+}
+
 // Main Elements
 
 body {
   font-size: 14px;
   line-height: 1.4;
-  text-shadow: rgba(0, 0, 0, 0.15) 0 1px 1px;
+  text-shadow: 0 1px 0 #DDD;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -92,12 +102,13 @@ ul, ol {
         display: inline;
         padding: 10px 0 5px 0;
         margin: 0 5px;
-        background-color: $main-color;
+        position: relative;
         font-weight: bold;
         
+        @include background-gradient($main-color, darken($main-color, 15%));
         @include border-radius(5px);
-        @include transition(background-color, 0.2s, linear);
-        &:hover { background-color: darken($main-color, 15%); }
+        @include transition(all, 0.1s, linear);
+        &:hover { top: 3px; }
         &.last { margin-right: 0; }
         
         a {
@@ -127,7 +138,7 @@ ul, ol {
   .title {
     padding: 5px 10px;
     margin-bottom: 5px;
-    background-color: $main-color;
+    @include background-gradient($main-color, darken($main-color, 15%));
     @include border-radius(5px);
     text-align: right;
     

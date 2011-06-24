@@ -29,3 +29,12 @@ task :new do
   `mate #{path}`
   exit
 end
+
+task :css do
+  require "sass"
+  contents = IO.read("css/site.scss").gsub(/^\-{3}\n.*?\-{3}/, "")
+  
+  File.open("_site/css/site.css", "w") do |f|
+    f.write Sass::Engine.new(contents, :syntax => :scss, :style => :compressed).render
+  end
+end

@@ -1,2 +1,4 @@
 _site
+_drafts
 .DS_STORE
+.sass-cache
