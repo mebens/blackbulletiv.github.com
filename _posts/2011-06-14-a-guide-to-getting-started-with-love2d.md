@@ -24,7 +24,7 @@ So, if you want to learn how to use LÖVE, read on.
 
 First thing to do is go and download the engine for your operating system over at [its homepage](http://love2d.org). Then proceed to install it. You'll probably want install Lua as well; you can get it from the [download page](http://www.lua.org/download.html), this will allow you to play around with Lua interactively using the `lua` command. You don't have install Lua to run games however, as Lua is included inside of LÖVE.
 
-Next make sure you've got a text editor on your system. For Windows, [Notepad++](http://notepad-plus-plus.org/) seems to be a good free one. On Mac you can get [TextWrangler](http://www.barebones.com/products/textwrangler/) if you want something that's good for free; if you get more serious in anything with programming I would highly recommend you buy [TextMate](http://macromates.com).
+Next make sure you've got a text editor on your system. For Windows, [Notepad++](http://notepad-plus-plus.org/) seems to be a good free one. On Mac you can get [TextWrangler](http://www.barebones.com/products/textwrangler/) if you want something that's good for free; if you get more serious in anything with programming I would highly recommend you buy [TextMate](http://macromates.com). For Linux, [gedit](http://projects.gnome.org/gedit/) comes pre-loaded on Ubuntu and similar Linux distros; as far as I know it supports Lua out of the box.
 
 Next, if you're on a Mac, you'll want to do the following to make it easier to run games from the terminal. Open up your text editor with a file located at `~/.bash_profile` (you may have to do this with the Terminal) and copy the following into it:
 

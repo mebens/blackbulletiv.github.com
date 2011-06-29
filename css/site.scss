@@ -5,6 +5,7 @@
 
 $base-h-margin: 0.6em;
 $main-color: #99D3F2;
+$project-download-bg: #00910A;
 
 @mixin transition($type, $time, $ease) {
   -webkit-transition: $type $time $ease;
@@ -25,6 +26,14 @@ $main-color: #99D3F2;
   background: -moz-gradient(center top, $from 0%, $to 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$from,endColorstr=$to);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$from,endColorstr=$to)"; // don't think this works
+}
+
+@mixin block-style {
+  box-shadow: 0 0 5px 0 rgba(25, 25, 25, 0.15);
+  -webkit-box-shadow: 0 0 5px 0 rgba(25, 25, 25, 0.15);
+  -moz-box-shadow: 0 0 5px 0 rgba(25, 25, 25, 0.15);
+  @include background-gradient($main-color, darken($main-color, 10%));
+  @include border-radius(5px);
 }
 
 // Main Elements
@@ -105,8 +114,7 @@ ul, ol {
         position: relative;
         font-weight: bold;
         
-        @include background-gradient($main-color, darken($main-color, 15%));
-        @include border-radius(5px);
+        @include block-style;
         @include transition(all, 0.1s, linear);
         &:hover { top: 3px; }
         &.last { margin-right: 0; }
@@ -126,8 +134,7 @@ ul, ol {
 #footer {
   margin: 20px 0 10px 0;
   padding: 10px;
-  background-color: $main-color;
-  @include border-radius(5px);
+  @include block-style;
 }
 
 // Sidebar
@@ -138,9 +145,8 @@ ul, ol {
   .title {
     padding: 5px 10px;
     margin-bottom: 5px;
-    @include background-gradient($main-color, darken($main-color, 15%));
-    @include border-radius(5px);
     text-align: right;
+    @include block-style;
     
     font: {
       size: 24px;
@@ -191,44 +197,49 @@ code, tt {
 
 // Projects
 
-.project-links {
-  text-align: right;
-}
-
-.project-download {
-  color: #000300;
-  background-color: #00910A;
-  padding: 10px;
-  position: relative;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  
-  @include transition(background-color, 0.2s, linear);
-  @include border-radius(10px);
-  
+@mixin project-box-shadow($shadow-blur) {
   box-shadow:
     1px 1px 0 0 #014D06,
     2px 2px 0 0 #014D06,
     3px 3px 0 0 #014D06,
     4px 4px 0 0 #014D06,
-    5px 5px 5px 0 #000000;
+    5px 5px $shadow-blur 0 #000;
     
   -webkit-box-shadow:
     1px 1px 0 0 #014D06,
     2px 2px 0 0 #014D06,
     3px 3px 0 0 #014D06,
     4px 4px 0 0 #014D06,
-    5px 5px 5px 0 #000000;
+    5px 5px $shadow-blur 0 #000;
   
   -moz-box-shadow:
     1px 1px 0 0 #014D06,
     2px 2px 0 0 #014D06,
     3px 3px 0 0 #014D06,
     4px 4px 0 0 #014D06,
-    5px 5px 5px 0 #000000;
+    5px 5px $shadow-blur 0 #000;
+}
+
+.project-links {
+  text-align: right;
+}
+
+.project-download {
+  color: #000300;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
   
-  &:hover { background-color: #00B00C; }
+  @include background-gradient($project-download-bg, darken($project-download-bg, 5%));
+  @include transition(box-shadow, 0.2s, linear);
+  @include transition(-webkit-box-shadow, 0.2s, linear);
+  @include transition(-moz-box-shadow, 0.2s, linear);
+  @include border-radius(10px);
+  @include project-box-shadow(5px);
+  
+  &:hover { @include project-box-shadow(10px); }
   &:active {
     box-shadow: 1px 1px 5px 0 #000000;
     -webkit-box-shadow: 1px 1px 5px 0 #000000;    
