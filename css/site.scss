@@ -6,6 +6,7 @@
 $base-h-margin: 0.6em;
 $main-color: #99D3F2;
 $project-download-bg: #00910A;
+$song-bg: #E8E8E8;
 
 @mixin transition($type, $time, $ease) {
   -webkit-transition: $type $time $ease;
@@ -24,8 +25,6 @@ $project-download-bg: #00910A;
   background: -webkit-linear-gradient($from, $to);
   background: -moz-linear-gradient(center top, $from 0%, $to 100%);
   background: -moz-gradient(center top, $from 0%, $to 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$from,endColorstr=$to);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$from,endColorstr=$to)"; // don't think this works
 }
 
 @mixin block-style {
@@ -197,29 +196,6 @@ code, tt {
 
 // Projects
 
-@mixin project-box-shadow($shadow-blur) {
-  box-shadow:
-    1px 1px 0 0 #014D06,
-    2px 2px 0 0 #014D06,
-    3px 3px 0 0 #014D06,
-    4px 4px 0 0 #014D06,
-    5px 5px $shadow-blur 0 #000;
-    
-  -webkit-box-shadow:
-    1px 1px 0 0 #014D06,
-    2px 2px 0 0 #014D06,
-    3px 3px 0 0 #014D06,
-    4px 4px 0 0 #014D06,
-    5px 5px $shadow-blur 0 #000;
-  
-  -moz-box-shadow:
-    1px 1px 0 0 #014D06,
-    2px 2px 0 0 #014D06,
-    3px 3px 0 0 #014D06,
-    4px 4px 0 0 #014D06,
-    5px 5px $shadow-blur 0 #000;
-}
-
 .project-links {
   text-align: right;
 }
@@ -232,14 +208,22 @@ code, tt {
   font-size: 24px;
   font-weight: bold;
   
-  @include background-gradient($project-download-bg, darken($project-download-bg, 5%));
-  @include transition(box-shadow, 0.2s, linear);
-  @include transition(-webkit-box-shadow, 0.2s, linear);
-  @include transition(-moz-box-shadow, 0.2s, linear);
-  @include border-radius(10px);
-  @include project-box-shadow(5px);
+  $shadow:
+    1px 1px 0 0 #014D06,
+    2px 2px 0 0 #014D06,
+    3px 3px 0 0 #014D06,
+    4px 4px 0 0 #014D06,
+    5px 5px 5px 0 #000;
   
-  &:hover { @include project-box-shadow(10px); }
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  
+  @include background-gradient($project-download-bg, darken($project-download-bg, 5%));
+  @include transition(color, 0.2s, linear);
+  @include border-radius(10px);
+  
+  &:hover { color: #DCDCDC; }
   &:active {
     box-shadow: 1px 1px 5px 0 #000000;
     -webkit-box-shadow: 1px 1px 5px 0 #000000;    
@@ -294,28 +278,20 @@ code, tt {
 // Music
 
 .song {
-  background-color: #E8E8E8;
   padding: 5px 10px;
   margin: 20px 0 5px 0;
   @include border-radius(8px);
+  @include background-gradient($song-bg, darken($song-bg, 10%));
   
-  box-shadow:
+  $shadow:
     1px 1px 0 0 #B0B0B0,
     2px 2px 0 0 #B0B0B0,
     3px 3px 0 0 #B0B0B0,
     4px 4px 0 0 #B0B0B0;
   
-  -webkit-box-shadow:
-    1px 1px 0 0 #B0B0B0,
-    2px 2px 0 0 #B0B0B0,
-    3px 3px 0 0 #B0B0B0,
-    4px 4px 0 0 #B0B0B0;
-
-  -moz-box-shadow:
-    1px 1px 0 0 #B0B0B0,
-    2px 2px 0 0 #B0B0B0,
-    3px 3px 0 0 #B0B0B0,
-    4px 4px 0 0 #B0B0B0;
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
 }
 
 // Little Classes
