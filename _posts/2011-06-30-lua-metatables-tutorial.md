@@ -9,7 +9,7 @@ tags:
   - OOP
 ---
 
-In this tutorial I'll be covering a very important concept in [Lua](http://lua.org): metatables. Knowledge of how to use metatables will allow you to be much more powerful in your use of Lua. Every table can have a metatable attached to it. A metatable is a table which can hold information which will change the behaviour of tables. Let's see an example.
+In this tutorial I'll be covering a very important concept in [Lua](http://lua.org): metatables. Knowledge of how to use metatables will allow you to be much more powerful in your use of Lua. Every table can have a metatable attached to it. A metatable is a table which, with some certain keys set, can change the behaviour of the table it's attached to. Let's see an example.
 
 {% highlight lua %}
 t = {} -- our normal table
@@ -18,7 +18,7 @@ setmetatable(t, mt) -- sets mt to be t's metatable
 getmetatable(t) -- this will return mt
 {% endhighlight %}
 
-As you can see, [`getmetatable`](http://www.lua.org/manual/5.1/manual.html#pdf-getmetatable) and [`setmetatable`](http://www.lua.org/manual/5.1/manual.html#pdf-setmetatable) are the key functions here; I think it's pretty obvious what they do. Of course, in this case we could contract the first three lines into this:
+As you can see, [`getmetatable`](http://www.lua.org/manual/5.1/manual.html#pdf-getmetatable) and [`setmetatable`](http://www.lua.org/manual/5.1/manual.html#pdf-setmetatable) are the main functions here; I think it's pretty obvious what they do. Of course, in this case we could contract the first three lines into this:
 
 {% highlight lua %}
 t = setmetatable({}, {})
@@ -26,7 +26,7 @@ t = setmetatable({}, {})
 
 `setmetatable` returns its first argument, therefore we can use this shorter form.
 
-Now, what do we put in these metatables. Metatables can contain anything, but they respond to certain string keys which start with `__`, such as `__index` and `__newindex`. The values corresponding to these keys will usually be functions or other tables. A code example:
+Now, what do we put in these metatables? Metatables can contain anything, but they respond to certain keys (which are strings of course) which start with `__`, such as `__index` and `__newindex`. The values corresponding to these keys will usually be functions or other tables. An example:
 
 {% highlight lua %}
 t = setmetatable({}, {
@@ -46,7 +46,7 @@ So as you can see, we assign a function to the `__index` key. Now let's have a l
 
 The most used metatable key is most likely `__index`; it can contain either a function or table.
 
-When you look up a table with a key, regardless of what the key is (`t[4]`, `t.foo`, and `t["foo"]`, for example), and a value hasn't been assigned for that key in this table, Lua will look for an `__index` key in the table's metatable (if it has a metatable). If `__index` contains a table, Lua will look up the key originally used in the table belonging to `__index`. This probably sounds confusing, so here's an example:
+When you look up a table with a key, regardless of what the key is (`t[4]`, `t.foo`, and `t["foo"]`, for example), and a value hasn't been assigned for that key, Lua will look for an `__index` key in the table's metatable (if it has a metatable). If `__index` contains a table, Lua will look up the key originally used in the table belonging to `__index`. This probably sounds confusing, so here's an example:
 
 {% highlight lua %}
 other = { foo = 3 }
@@ -55,9 +55,9 @@ t.foo -- 3
 t.bar -- nil
 {% endhighlight %}
 
-If `__index` contains a function, then it's called, with the table that is being looked up and the key used as parameters. As we saw in the code above the last one, this allows us to use conditionals on the key, and basically anything else that Lua code can do. So in that example, if the key was equal to the string "foo" we would return 0, otherwise we look up the `table` table with the key that was used; this makes `t` an alias of `table` that returns 0 when the key "foo" is used.
+If `__index` contains a function, then it's called, with the table that is being looked up and the key used as parameters. As we saw in the code example above the last one, this allows us to use conditionals on the key, and basically anything else that Lua code can do. Therefore, in that example, if the key was equal to the string "foo" we would return 0, otherwise we look up the `table` table with the key that was used; this makes `t` an alias of `table` that returns 0 when the key "foo" is used.
 
-You may be wondering why the table is passed as a first parameter to the `__index` function. This comes in handy if you use the same metatable for multiple tables, supporting code re-use and saving computer resources.
+You may be wondering why the table is passed as a first parameter to the `__index` function. This comes in handy if you use the same metatable for multiple tables, supporting code re-use and saving computer resources. We'll see an example of this when we take a look at the `Vector` class.
 
 ## `__newindex`
 
@@ -94,11 +94,11 @@ t.bar -- 16
 t.la -- 100
 {% endhighlight %}
 
-When creating a new key in `t`, if the value is a number it will be squared, otherwise it will just be set anyway. This introduces to our friends, `rawget` and `rawset`.
+When creating a new key in `t`, if the value is a number it will be squared, otherwise it will just be set anyway. This introduces us to our friends, `rawget` and `rawset`.
 
 ## `rawget` and `rawset`
 
-There are times when you need get and set a table's keys without having Lua do it's thing with metatables. As you might guess, [`rawget`](http://www.lua.org/manual/5.1/manual.html#pdf-rawget) allows you to get the value of a key without Lua using `__index`, and [`rawset`](http://www.lua.org/manual/5.1/manual.html#pdf-rawset) allows you to set the value of a key without Lua using `__newindex` (no these don't provide a speed increase to conventional way of doing things). You'll need to use these when you would get stuck in an infinite loop. For example, in that last code example, the code `t[key] = value * value` would set off the same `__newindex` function again, which would get you stuck in an infinite loop. Using `rawset(t, key, value * value)` avoids this.
+There are times when you need get and set a table's keys without having Lua do it's thing with metatables. As you might guess, [`rawget`](http://www.lua.org/manual/5.1/manual.html#pdf-rawget) allows you to get the value of a key without Lua using `__index`, and [`rawset`](http://www.lua.org/manual/5.1/manual.html#pdf-rawset) allows you to set the value of a key without Lua using `__newindex` (no these don't provide a speed increase to conventional way of doing things). You'll need to use these when you would otherwise get stuck in an infinite loop. For example, in that last code example, the code `t[key] = value * value` would set off the same `__newindex` function again, which would get you stuck in an infinite loop. Using `rawset(t, key, value * value)` avoids this.
 
 As you probably can see, to use these functions, for parameters we must pass in the target table, the key, and if you're using `rawset`, the value.
 
@@ -122,7 +122,7 @@ t = setmetatable({ 1, 2, 3 }, {
 t = t * 2 -- { 1, 2, 3, 1, 2, 3 }
 {% endhighlight %}
 
-This allows us to create a new table with the original replicated a certain amount of times using the multiplication operator. As you can tell the corresponding key for multiplication is `__mul`; unlike `__index` and `__newindex` the keys for operators can only contain functions. The first parameter these functions always receive is the target table, and then the value on the right hand side (except for the unary `-` which has the key of `__unm`). Here's a list of the operators:
+This allows us to create a new table with the original replicated a certain amount of times using the multiplication operator. As you can tell, the corresponding key for multiplication is `__mul`; unlike `__index` and `__newindex` the keys for operators can only contain functions. The first parameter these functions always receive is the target table, and then the value on the right hand side (except for the unary `-` which has the key of `__unm`). Here's a list of the supported operators:
 
 * `__add`: Addition (`+`)
 * `__sub`: Subtraction (`-`)
@@ -157,7 +157,7 @@ The function in call is passed the target table as usual, followed by the parame
 
 ## `__tostring`
 
-The final thing we need to cover is `__tostring`. If implemented, it's used by the [`tostring`](http://www.lua.org/manual/5.1/manual.html#pdf-tostring) to convert a table into a string, most handy when using a function like [`print`](http://www.lua.org/manual/5.1/manual.html#pdf-print). Normally, when you try to convert a table to a string, you something in the format of "table: 0x&lt;hex-code-here&gt;", but you can change that using `__tostring`. An example:
+The final thing we need to cover is `__tostring`. If implemented, it's used by [`tostring`](http://www.lua.org/manual/5.1/manual.html#pdf-tostring) to convert a table into a string, most handy when using a function like [`print`](http://www.lua.org/manual/5.1/manual.html#pdf-print). Normally, when you try to convert a table to a string, you something in the format of "table: 0x&lt;hex-code-here&gt;", but you can change that using `__tostring`. An example:
 
 {% highlight lua %}
 t = setmetatable({ 1, 2, 3 }, {
@@ -173,7 +173,7 @@ print(t) -- prints out "Sum: 6"
 
 ## Building the Vector Class
 
-To wrap everything, we'll write a class encapsulating a 2D vector (thanks to [hump.vector](https://github.com/vrld/hump/blob/master/vector.lua) for much of the code). It's too large to put here, but you can see the full code at gist #1055480. I've positioned all the stuff to do with metatables first in the file, as that's the most important stuff. (Be warned, this may be a bit confusing if you've never encountered Object-Oriented Programming before.)
+To wrap everything up, we'll write a class encapsulating a 2D vector (thanks to [hump.vector](https://github.com/vrld/hump/blob/master/vector.lua) for much of the code). It's too large to put here, but you can see the full code at gist #1055480. I've positioned all the stuff to do with metatables first in the file, as that's the most important stuff. (Be warned, this may be a bit confusing if you've never encountered Object-Oriented Programming before.)
 
 {% highlight lua %}
 Vector = {}
@@ -188,7 +188,7 @@ function Vector.new(x, y)
 end
 {% endhighlight %}
 
-As you can see, it creates a new table with `x` and `y` properties, and then sets the metatable to the `Vector` class. As we know, `Vector` contains all the metamethods and especially the `__index` key. This means that we can use all the functions we define in `Vector` through this new table. We'll come back to this in a moment.
+It creates a new table with `x` and `y` properties, and then sets the metatable to the `Vector` class. As we know, `Vector` contains all the metamethods and especially the `__index` key. This means that we can use all the functions we define in `Vector` through this new table. We'll come back to this in a moment.
 
 Another important thing is the last line:
 
