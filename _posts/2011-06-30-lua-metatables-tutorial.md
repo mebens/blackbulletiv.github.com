@@ -139,7 +139,7 @@ This allows us to create a new table with the original replicated a certain amou
 
 ## `__call`
 
-Last of all is the `__call` key, which allows you to call tables as functions. A code example:
+Next comes the `__call` key, which allows you to call tables as functions. A code example:
 
 {% highlight lua %}
 t = setmetatable({}, {
@@ -157,7 +157,7 @@ The function in call is passed the target table as usual, followed by the parame
 
 ## `__tostring`
 
-The final thing we need to cover is `__tostring`. If implemented, it's used by [`tostring`](http://www.lua.org/manual/5.1/manual.html#pdf-tostring) to convert a table into a string, most handy when using a function like [`print`](http://www.lua.org/manual/5.1/manual.html#pdf-print). Normally, when you try to convert a table to a string, you something in the format of "table: 0x&lt;hex-code-here&gt;", but you can change that using `__tostring`. An example:
+Last of all is `__tostring`. If implemented, it's used by [`tostring`](http://www.lua.org/manual/5.1/manual.html#pdf-tostring) to convert a table into a string, most handy when using a function like [`print`](http://www.lua.org/manual/5.1/manual.html#pdf-print). Normally, when you try to convert a table to a string, you something in the format of "table: 0x&lt;hex-code-here&gt;", but you can change that using `__tostring`. An example:
 
 {% highlight lua %}
 t = setmetatable({ 1, 2, 3 }, {
