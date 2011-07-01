@@ -26,7 +26,7 @@ t = setmetatable({}, {})
 
 `setmetatable` returns its first argument, therefore we can use this shorter form.
 
-Now, what do we put in these metatables? Metatables can contain anything, but they respond to certain keys (which are strings of course) which start with `__`, such as `__index` and `__newindex`. The values corresponding to these keys will usually be functions or other tables. An example:
+Now, what do we put in these metatables? Metatables can contain anything, but they respond to certain keys (which are strings of course) which always start with `__` (two underscores in a row), such as `__index` and `__newindex`. The values corresponding to these keys will usually be functions or other tables. An example:
 
 {% highlight lua %}
 t = setmetatable({}, {
