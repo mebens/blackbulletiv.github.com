@@ -43,6 +43,13 @@ projects:
     description: A few experimental classes for benchmarking in AS3.
 music:
   -
+    title: A Day in Life
+    date: "July 10, 2011"
+    length: "1:23"
+    video: ARDWCzmNoy0
+    file: A Day in Life.mp3
+    description: "A quick and simple tune I put together in about an hour and a half; pretty repetive base tune, sounds pretty fit for a time lapse (hence the title). Instruments are organ, strings, and a custom-tuned electronic bell."
+  -
     title: Run
     date: "June 8, 2011"
     length: "1:49"
