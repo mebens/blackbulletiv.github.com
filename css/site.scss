@@ -70,7 +70,15 @@ ul, ol {
 // Header
 
 #header {
-  .left-side {
+  position: relative;
+  top: -10px;
+  padding: 15px;
+  padding-top: 20px;
+  
+  @include border-radius(8px);
+  @include background-gradient(#E6E6E6, #CDCDCD);
+  
+  /*.left-side {
     margin: 10px 0 20px 0;
     
     .title {
@@ -97,11 +105,9 @@ ul, ol {
       margin-top: -8px;
       text-shadow: rgba(0, 0, 0, 0.25) 0 1px 5px;
     }
-  }
+  }*/
   
-  #menu {
-    text-align: right;
-    
+  #menu {    
     ul {
       list-style-type: none;
       margin: 2px 0 0 0;
