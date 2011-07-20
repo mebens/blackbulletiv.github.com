@@ -2,7 +2,7 @@ task :default => :build
 
 task :build do
   system("jekyll")
-  system("git pushom")
+  system("git push origin master")
 end
 
 task :new do
