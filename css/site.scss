@@ -27,12 +27,21 @@ $song-bg: #E8E8E8;
   background: -moz-gradient(center top, $from 0%, $to 100%);
 }
 
+// Style Specific Mixins
+
 @mixin block-style {
   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), 1px 3px 1px 0 rgba(0, 0, 0, 0.25);
   -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), 1px 3px 1px 0 rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), 1px 3px 1px 0 rgba(0, 0, 0, 0.25);
   @include background-gradient(#E6E8E8, #DDDFDF);
   @include border-radius(5px);
+}
+
+@mixin big-block-shadow {
+  $shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1), 1px 6px 3px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: $shadow;
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
 }
 
 // Main Elements
@@ -83,37 +92,7 @@ ul, ol {
   
   @include border-radius(8px);
   @include background-gradient(#F3F3F3, #E9EBEB);
-  background-color: #F3F3F3;
   box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1), 1px 6px 3px 0 rgba(0, 0, 0, 0.25);
-  
-  /*.left-side {
-    margin: 10px 0 20px 0;
-    
-    .title {
-      margin-bottom: 0;
-      text-shadow:
-        #BBB -1px -1px 0,
-        #AAA -2px -2px 0,
-        #999 -3px -3px 0,
-        #888 -4px -4px 0;
-
-      font: {
-        size: 3.5em;
-        weight: bold;
-      }
-
-      a {
-        color: #000;
-        &:hover { color: #333; }
-      }
-    }
-
-    .tagline {
-      @extend .quite;
-      margin-top: -8px;
-      text-shadow: rgba(0, 0, 0, 0.25) 0 1px 5px;
-    }
-  }*/
   
   #menu {    
     ul {
@@ -261,26 +240,6 @@ code, tt {
   h4 {font-size: 1.3em; }
 }
 
-// Contact Page
-/*
-.contact {
-  table {
-    tbody tr:nth-child(even) td, tbody tr.even td { background: transparent; }
-    .label-cell {
-      padding-left: 0;
-      width: 45px;
-    }
-  }
-  
-  input[type="text"] { width: 220px; }
-  input[type="text"], textarea {
-    font-size: 14px;
-    border-radius: 5px;
-    padding: 5px;
-  }
-}
-*/
-
 // Posts
 
 .post {
@@ -300,18 +259,10 @@ code, tt {
 .song {
   padding: 5px 10px;
   margin: 20px 0 5px 0;
+  
   @include border-radius(8px);
-  @include background-gradient($song-bg, darken($song-bg, 10%));
-  
-  $shadow:
-    1px 1px 0 0 #B0B0B0,
-    2px 2px 0 0 #B0B0B0,
-    3px 3px 0 0 #B0B0B0,
-    4px 4px 0 0 #B0B0B0;
-  
-  box-shadow: $shadow;
-  -webkit-box-shadow: $shadow;
-  -moz-box-shadow: $shadow;
+  @include background-gradient(#E6E8E8, #DDDFDF);
+  @include big-block-shadow;
 }
 
 // Little Classes
