@@ -4,7 +4,7 @@ title: Projects
 ---
 
 {% for project in page.projects %}
-  <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
+  <h2><a href="{{ project.url }}" class="dark-link">{{ project.title }}</a></h2>
   {% if project.version %}<span class="large-para">{{ project.version }}</span> <span class="med-para">-</span> {% endif %}
   <span class="med-para"><a href="{{ project.repo }}">Repository</a></span><br />
   {% if project.description %}<p class="low-top">{{ project.description }}</p>{% endif %}

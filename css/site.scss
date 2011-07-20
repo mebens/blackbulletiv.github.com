@@ -4,7 +4,7 @@
 // Variables and General Mixins
 
 $base-h-margin: 0.6em;
-$main-color: #99D3F2;
+$font-color: #3B4653;
 $project-download-bg: #00910A;
 $song-bg: #E8E8E8;
 
@@ -28,25 +28,31 @@ $song-bg: #E8E8E8;
 }
 
 @mixin block-style {
-  box-shadow: 0 0 5px 0 rgba(25, 25, 25, 0.15);
-  -webkit-box-shadow: 0 0 5px 0 rgba(25, 25, 25, 0.15);
-  -moz-box-shadow: 0 0 5px 0 rgba(25, 25, 25, 0.15);
-  @include background-gradient($main-color, darken($main-color, 10%));
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), 1px 3px 1px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), 1px 3px 1px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1), 1px 3px 1px 0 rgba(0, 0, 0, 0.25);
+  @include background-gradient(#E6E8E8, #DDDFDF);
   @include border-radius(5px);
 }
 
 // Main Elements
 
 body {
+  color: $font-color;
   font-size: 14px;
   line-height: 1.4;
-  text-shadow: 0 1px 0 #DDD;
+  text-shadow: 0 1px 0 #EEE;
   -webkit-font-smoothing: antialiased;
+  background: url(/images/bg.png) repeat;
 }
 
 // Typography
 
-h1, h2, h3, h4, h5, h6 { margin-bottom: 0.2em; }
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.2em;
+  color: darken($font-color, 15%);
+}
+
 h1 { margin-top: $base-h-margin + 0.2; }
 h2 { margin-top: $base-h-margin + 0.15; }
 h3 { margin-top: $base-h-margin + 0.1; }
@@ -57,10 +63,10 @@ p {
 }
 
 a, a code {
-  color: #06C;
+  color: #2562B0;
   text-decoration: none;
   @include transition(all, 0.2s, linear);
-  &:hover { color: #09F; }
+  &:hover { color: #2DA6E3; }
 }
 
 ul, ol {
@@ -72,11 +78,13 @@ ul, ol {
 #header {
   position: relative;
   top: -10px;
-  padding: 15px;
+  padding-bottom: 15px;
   padding-top: 20px;
   
   @include border-radius(8px);
-  @include background-gradient(#E6E6E6, #CDCDCD);
+  @include background-gradient(#F3F3F3, #E9EBEB);
+  background-color: #F3F3F3;
+  box-shadow: 0 5px 0 0 rgba(0, 0, 0, 0.1), 1px 6px 3px 0 rgba(0, 0, 0, 0.25);
   
   /*.left-side {
     margin: 10px 0 20px 0;
@@ -110,25 +118,31 @@ ul, ol {
   #menu {    
     ul {
       list-style-type: none;
-      margin: 2px 0 0 0;
+      margin: 5px;
+      margin-left: 0;
       
       li {
         display: inline;
-        padding: 10px 0 5px 0;
+        padding: 7px 0 7px 0;
         margin: 0 5px;
         position: relative;
-        font-weight: bold;
+        font-family: Verdana, Arial, sans-serif;
+        font-size: 16px;
+        border: 1px solid #DDDFDF;
+        background: transparent;
         
-        @include block-style;
+        
+        @include border-radius(5px);
         @include transition(all, 0.1s, linear);
-        &:hover { top: 3px; }
+        
+        &:hover { background: #DDDFDF; }
         &.last { margin-right: 0; }
         
         a {
-          padding: 10px 12px 5px 12px; // top/bottom padding doesn't do anything visually, but is there to create a bigger clicking area
-          color: #000;
-          &:hover { color: #000; }
-        }        
+          padding: 7px 12px 7px 12px; // top/bottom padding doesn't do anything visually, but is there to create a bigger clicking area
+          color: #333;
+          &:hover { color: #0698CF; }
+        }
       }
     }
   }
@@ -149,7 +163,7 @@ ul, ol {
   
   .title {
     padding: 5px 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: right;
     @include block-style;
     
@@ -308,3 +322,8 @@ code, tt {
 .large-bottom { margin-bottom: 0.7em; }
 .large-para { font-size: 1.5em; }
 .med-para { font-size: 1.2em; }
+
+.dark-link {
+  color: #314853;
+  &:hover { color: #407C8F; }
+}
