@@ -32,7 +32,7 @@ Maybe I'll come to like it later on, but not for now.
 
 ## Re-Done Apps
 
-I've noticed a number of the apps have had a makeover. Of course there's Mail 5, but I haven't used it since I use [Sparrow](http://sparrowmailapp.com/) for my e-mail. But iCal and Address Book (there may be more apps too) also have a new look to them, which I really like. (I was going to some screenshots, by my app for that doesn't work with Lion it seems.)
+I've noticed a number of the apps have had a makeover. Of course there's Mail 5, but I haven't used it since I use [Sparrow](http://sparrowmailapp.com/) for my e-mail. But iCal and Address Book (there may be more apps too) also have a new look to them, which I really like. (I was going to give some screenshots, by my app for that doesn't work with Lion it seems.)
 
 ## Little Changes
 
