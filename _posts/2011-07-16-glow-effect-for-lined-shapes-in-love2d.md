@@ -27,7 +27,7 @@ for i = 7, 2, -1 do
 end
 {% endhighlight %}
 
-The shape get drawn multiple times, each time with a different line width, set by `i`. In all, six shapes are drawn with the widths 7, 6, 5, 4, 3, 1. For all the lines, except the last, the alpha of the colour (by the way, `r`, `g`, and `b` represent the respective values of whatever colour you might choose) is set to 15. Since the alpha of every overlapping colour is added to each other (by default), for each line the colour will get stronger and stronger, giving the glow effect. The last line is given an alpha of 255, since this is where all the "light" is meant to be coming from.
+The shape gets drawn multiple times, each time with a different line width, set by `i`. In all, six shapes are drawn with the widths 7, 6, 5, 4, 3, 1. For all the lines, except the last, the alpha of the colour (by the way, `r`, `g`, and `b` represent the respective values of whatever colour you might choose) is set to 15. Since the alpha of every overlapping colour is added to each other (by default), for each line the colour will get stronger and stronger, giving the glow effect. The last line is given an alpha of 255, since this is where all the "light" is meant to be coming from.
 
 Of course, these values have just come from my fiddling around, you'll probably want to tweak them yourself to get the effect you need.
 
