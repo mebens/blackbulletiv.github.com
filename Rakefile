@@ -26,7 +26,7 @@ task :new do
     f.puts ""
   end
   
-  `mate #{path}`
+  `open -a Byword #{path}`
   exit
 end
 

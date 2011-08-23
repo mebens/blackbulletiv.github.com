@@ -7,6 +7,7 @@ tags:
   - Love2D
   - Lua
   - programming
+  - Ludum Dare
 ---
 
 From April 29 to May 2 [Ludum Dare](http://www.ludumdare.com/) 20 has been going on. For those who don't know, the main competition involves making a game based on a certain theme in a 48 period; tough call. Hundreds of developers have a shot at this every four months, and I thought I'd give it a try. In this post, I'm going to write about my experience in it, and the lessons I learnt. I'll let you know now, however, the end result was me pulling out not long after half-way.
