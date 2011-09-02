@@ -6,6 +6,7 @@ tags:
   - PHP
   - time
   - web development
+  - quick tips
 ---
 
 I though I'd just write a quick tutorial on how I make a dynamic copyright for my websites. If you don't know what a function does in the code, look it up on the PHP manual.

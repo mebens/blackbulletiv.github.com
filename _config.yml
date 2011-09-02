@@ -42,11 +42,6 @@ projects:
     title: "AS3 Benchmarking"
     version: "0.1"
     description: A few experimental classes for benchmarking in AS3.
-games:
-  -
-    title: Facilitated Escape
-    slug: facilitated-escape
-    description: "A small retro-styled game based around escaping a crumbling facility in your rocket. It was created in under 48 hours for the 21st Ludum Dare competition."
 music:
   -
     title: A Day in Life
