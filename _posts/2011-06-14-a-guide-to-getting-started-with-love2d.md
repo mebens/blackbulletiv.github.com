@@ -97,7 +97,7 @@ I know this is all very abstract, but here's an example straight from LÖVE:
 {% highlight lua %}
 -- love.graphics.newParticleSystem creates an instance of the ParticleSystem class
 -- The ps variable now contains an object of the ParticleSystem class
-ps = love.filesystem.newParticleSystem(image, 1000)
+ps = love.graphics.newParticleSystem(image, 1000)
 ps:getDirection() -- getting some data that the object holds
 ps:setDirection(0) -- setting some data of the object
 ps:start() -- calling a method which uses the data to do something
