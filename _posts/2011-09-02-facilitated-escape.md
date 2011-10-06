@@ -9,6 +9,7 @@ tags:
   - releases
   - Love2D
   - Lua
+  - Facilitated Escape
 ---
 
 This post is to announce the release of the first version of my game, [Facilitated Escape](/games/facilitated-escape) (other than the one submitted to Ludum Dare). I've been working on it for nearly two weeks since I started work during Ludum Dare 21.
