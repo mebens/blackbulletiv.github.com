@@ -9,6 +9,7 @@ tags:
   - game development
   - Lua
   - Love2D
+  - Facilitated Escape
 ---
 
 In this post I'll be taking a look at how I programmed aspects of the ship's thruster in my game, [Facilitated Escape](/games/facilitated-escape). I'll most likely be making more posts like this in the future (as in, I intend to make a series of "How It Works" posts).
