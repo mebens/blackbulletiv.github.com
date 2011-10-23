@@ -2,7 +2,7 @@
 layout: post
 title: "How It Works: The Thruster in Facilitated Escape"
 date: 2011-10-23 14:06:00
-category: Tutorial
+category: Tutorials
 tags:
   - How It Works
   - programming
