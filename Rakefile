@@ -16,7 +16,7 @@ task :new do
   File.open(path, "w") do |f|
     f.puts "---"
     f.puts "layout: post"
-    f.puts "title: #{title}"
+    f.puts "title: \"#{title}\""
     f.puts "date: #{now.strftime('%F %T')}"
     f.puts "category: "
     f.puts "tags:"
