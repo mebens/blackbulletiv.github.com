@@ -2,7 +2,7 @@
 layout: post
 title: "Progress on the Platformer"
 date: 2011-10-28 13:02:40
-category: General
+category: Projects
 tags:
   - game development
   - programming
