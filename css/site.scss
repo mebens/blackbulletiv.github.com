@@ -254,6 +254,26 @@ code, tt {
   margin-top: 20px;
 }
 
+// Games
+
+.game-left, .game-middle, .game-right {
+  width: 226px;
+  float: left;
+}
+
+.game-left {
+  margin-right: 5px;
+}
+
+.game-middle {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.game-right {
+  margin-left: 5px;
+}
+
 // Music
 
 .song {

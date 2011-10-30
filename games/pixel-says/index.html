@@ -1,0 +1,45 @@
+---
+layout: default
+title: Pixel Says
+no_sidebar: true
+swf_object: true
+---
+
+<div class="span-11 large-top">
+  <object id="game" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="400" height="400">
+    <param name="movie" value="game.swf" />
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="game.swf" width="400" height="400">
+    <!--<![endif]-->
+      <p>It looks like you don't have Flash installed. You can download it from the <a href="http://get.adobe.com/flashplayer/">Flash download page</a>.</p>
+    <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+  </object>
+  
+  <p>
+    <strong>Enter</strong>: New game<br />
+    <strong>1</strong>: Red<br />
+    <strong>2</strong>: Green<br />
+    <strong>3</strong>: Yellow<br />
+    <strong>4</strong>: Blue
+  </p>
+</div>
+
+<div class="span-13 last large-top">
+  <p>Pixel Says is a Simon Says remake implemented using only one pixel for graphics, which you can play to the right. It was made using <a href="http://flashpunk.net">FlashPunk</a>, in around an hour and a half.</p>
+  
+  <p>If you want to get technical, the graphics are stored in an image buffer with dimensions of 1x1; this buffer is then scaled up by 400 so you can see it at a good size.</p>
+  
+  <h2>How to Play</h2>
+  
+  <p>In case you don't know how to play Simon Says, here's a little instruction. Once you start the game, a colour will appear; repeat this colour by pressing one of the colour buttons (1, 2, 3, or 4). Then the first colour, followed by a new colour will be displayed; you must then repeat both in sequential order. This process will keep repeating, and the aim of the game is keep up with the pattern for as long as possible.</p>
+  
+  <h2>Source and License</h2>
+  
+  <p>You can find the source code for the game at its <a href="https://github.com/BlackBulletIV/pixel-says">GitHub repository</a>. Everything is licensed under the <a href="http://www.opensource.org/licenses/Zlib">zlib/libpng license</a>.</p>
+</div>
+
+<script type="text/javascript">
+swfobject.registerObject("game", "10", "/js/swfobject/expressInstall.swf");
+</script>

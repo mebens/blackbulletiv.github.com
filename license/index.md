@@ -13,4 +13,4 @@ Unless otherwise stated, all code examples are public domain, so you can do what
 
 ## Posts, Content, Etc.
 
-The posts, content, any other text-like stuff is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/) (long license name isn't it?).
+The posts, content, any other text-like stuff is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](http://creativecommons.org/licenses/by-nc-nd/3.0/) (long license name isn't it?), unless it is stated otherwise.
