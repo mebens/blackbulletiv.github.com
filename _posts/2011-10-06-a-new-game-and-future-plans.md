@@ -10,6 +10,7 @@ tags:
   - Flash
   - FlashPunk
   - Facilitated Escape
+  - Illusive Dreams
 ---
 
 I've been working on a number of things lately (hence why I haven't posted for a month), one of those things being a new game, which I'll be talking about in this post. After completing [Facilitated Escape](/games/facilitated-escape), I spent a few days wondering what game I should create next. This is where I've got with my idea so far:

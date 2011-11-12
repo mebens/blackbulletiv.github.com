@@ -9,6 +9,7 @@ tags:
   - Flash
   - ActionScript
   - FlashPunk
+  - Illusive Dreams
 ---
 
 Since last time I [posted](/2011/10/06/a-new-game-and-future-plans/) on my new platformer game, a lot as happened (as you would expect). Since then, I've released two new progress videos, so instead of me throwing a wall of text at you, I'll let them speak for themselves. Take note that, like last time, the videos are darker than the game itself (though the severity of this seems to have improved somewhat).
