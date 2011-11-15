@@ -2,7 +2,6 @@ task :default => :build
 
 task :build do
   system("jekyll")
-  system("git push origin master")
 end
 
 task :new do
