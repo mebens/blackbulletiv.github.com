@@ -14,7 +14,7 @@ tags:
 
 Quite a bit has happened (as usual) since the last update via my blog. I've created more levels, added a system for chapters, and many other changes and additions. But there are two main things which I'll cover in this post.
 
-First is the release of a [test build](/games/illusive-dreams/test) of the game. I needed some people to test the game, to find problems and things that could be improved (the main thing of interest for me was the difficulty). A few people ([negativeview](http://forums.tigsource.com/index.php?action=profile;u=48244), [@PeteDevlin](http://twitter.com/PeteDevlin), [@b1narythe1f](http://twitter.com/b1narythe1f), and [@headchant](http://twitter.com/); thanks guys!) volunteered to test it, and gave me some pretty helpful feedback. I plan to release another test build sometime soon.
+First is the release of a [test build](/games/illusive-dreams/test) of the game. I needed some people to test the game, to find problems and things that could be improved (the main thing of interest for me was the difficulty). A few people ([negativeview](http://forums.tigsource.com/index.php?action=profile;u=48244), [@PeteDevlin](http://twitter.com/PeteDevlin), [@b1naryth1ef](http://twitter.com/b1naryth1ef), and [@headchant](http://twitter.com/headchant); thanks guys!) volunteered to test it, and gave me some pretty helpful feedback. I plan to release another test build sometime soon.
 
 By the way, if you end up testing it, please contact me with any suggestions/comments you might have.
 
