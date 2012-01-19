@@ -1,6 +1,3 @@
-// since the SOPA strike code is failing, this will have to do for now
-window.location = "http://sopastrike.com/strike/";
-
 function getEmail()
 {
   var nf323 = "-fusion";
