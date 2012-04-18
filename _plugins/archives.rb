@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'require_relative'
 require_relative 'custom_page'
 

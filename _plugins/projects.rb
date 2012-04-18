@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'rubygems'
 require 'require_relative'
 require_relative 'custom_page'
 
