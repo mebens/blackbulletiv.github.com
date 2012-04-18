@@ -1,4 +1,6 @@
 # Thanks to http://recursive-design.com/projects/jekyll-plugins/ for the code off which this is based
+require 'rubygems'
+require 'require_relative'
 require_relative 'custom_page'
 
 module Jekyll
