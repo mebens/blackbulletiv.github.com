@@ -1,4 +1,3 @@
-require 'require_relative'
 require_relative 'custom_page'
 
 module Jekyll
