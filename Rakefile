@@ -14,18 +14,20 @@ task :new do
   
   File.open(path, "w") do |f|
     f.puts "---"
+    f.puts ""
     f.puts "layout: post"
     f.puts "title: \"#{title}\""
     f.puts "date: #{now.strftime('%F %T')}"
     f.puts "category: "
     f.puts "tags:"
     f.puts "  - "
+    f.puts ""
     f.puts "---"
     f.puts ""
     f.puts ""
   end
   
-  `open -a Byword #{path}`
+  `open -a "Sublime Text 2" #{path}`
   exit
 end
 
