@@ -42,33 +42,3 @@ projects:
     title: "AS3 Benchmarking"
     version: "0.1"
     description: A few experimental classes for benchmarking in AS3.
-music:
-  -
-    title: A Day in Life
-    date: "July 10, 2011"
-    length: "1:23"
-    video: ARDWCzmNoy0
-    file: A Day in Life.mp3
-    description: "A quick and simple tune I put together in about an hour and a half; pretty repetive base tune, sounds pretty fit for a time lapse (hence the title). Instruments are organ, strings, and a custom-tuned electronic bell."
-  -
-    title: Run
-    date: "June 8, 2011"
-    length: "1:49"
-    video: xdgI1tJca1A
-    file: Run.mp3
-    description: "Fast paced, giving the sense of running. Piano, strings, a synth instrument, and a bass guitar are the instruments."
-  -
-    title: The Mountain
-    date: "May 28, 2011"
-    length: "2:16"
-    video: PrGvRJLOYHU
-    file: The Mountain.mp3
-    description: "Slow and reflective, this song gives a feel of a long climb while reflecting on what has been done. Strings, piano, and flute, are the instruments."
-  -
-    title: Looking Back
-    date: "April 17, 2011"
-    length: "1:20"
-    video: Fvhsfsgc_Ck
-    file: Looking Back.mp3
-    description: "Slow(ish) and reflective, possibly picturing looking back over the path travelled. Strings and flute are the instruments. Also, this song was made to be looped."
-

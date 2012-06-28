@@ -16,11 +16,11 @@ layout: default
   <hr />
   
   {% if page.tags %}
-    Tagged in
     {% for tag in page.tags %}
+      {% if forloop.first %}Tagged in{% endif %}
       <strong><a href="/tags/{{ tag | slugize }}">{{ tag }}</a></strong>{% unless forloop.last %}, {% endunless %}
+      {% if forloop.last %}<br />{% endif %}
     {% endfor %}
-    <br />
   {% endif %}
   
   <div class="next-prev-nav low-top">
