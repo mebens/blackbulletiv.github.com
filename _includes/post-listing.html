@@ -1,3 +1,7 @@
+{% unless num_words %}
+  {% assign num_words = 75 %}
+{% endunless %}
+
 {% for post in posts limit: listing_limit %}
   <h2><a href="{{ post.url }}" class="dark-link">{{ post.title }}</a></h2>
   <h4 class="low-top">
@@ -9,6 +13,6 @@
     {% endunless %}
   </h4>
   
-  <p>{{ post.content | strip_html | truncatewords: 75 }}</p>
+  <p>{{ post.content | strip_html | truncatewords: num_words }}</p>
   <p><a href="{{ post.url }}">Read more...</a></p>
 {% endfor %}

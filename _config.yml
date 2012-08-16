@@ -10,35 +10,3 @@ title: Michael Ebens
 url: http://nova-fusion.com
 github_user: BlackBulletIV
 game_dir: games
-projects:
-  strong:
-    version: 1.0.2
-    docs: wiki
-    description: A small Lua library which greatly enhances strings.
-  "amfphp-toolbox":
-    title: AMFPHP Toolbox
-    version: 2.1.1
-    description: An ActionScript library to help you get more done with AMFPHP.
-  "enhanced-lua.tmbundle":
-    description: "This is my version of the Lua TextMate bundle. I've taken it and added support for the libraries I use a lot in Lua. These are MiddleClass, Telescope, and the Love2D engine."
-  SOSConnection:
-    version: 1.0.1
-    description: A class that makes using SOS max more straight forward.
-  "unix-utils":
-    title: Unix Utils
-    description: Project for the utility commands for the terminal I have/might/will make.
-  vault:
-    title: Vault
-    version: "1.0"
-    description: "A small data storage library for Love2D, which allows you to save and retrieve data in native Lua data types."
-  "middleclass-extensions":
-    title: MiddleClass Extensions
-    version: "1.0"
-    description: My extensions to MiddleClass.
-  closureclass:
-    title: ClosureClass
-    description: "A Lua object-orientation library based on MiddleClass, except using the closure approach. Not fit for production!"
-  "as3-benchmarking":
-    title: "AS3 Benchmarking"
-    version: "0.1"
-    description: A few experimental classes for benchmarking in AS3.

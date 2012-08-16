@@ -1,0 +1,11 @@
+{% for post in posts limit: listing_limit %}
+  <h3><a href="{{ post.url }}" class="dark-link">{{ post.title }}</a></h3>
+  <h5 class="low-top">
+    Posted on {{ post.date | format_date }}
+    {% unless no_category %}
+      {% if post.category %}
+        in <a href="/categories/{{ post.category | slugize }}">{{ post.category }}</a>
+      {% endif %}
+    {% endunless %}
+  </h5>
+{% endfor %}

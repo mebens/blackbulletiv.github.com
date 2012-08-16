@@ -3,26 +3,28 @@ layout: default
 no_sidebar: true
 ---
 
-<h2 class="h1-5">Hello there!</h2>
+<div class="span-10">
+  <h2 class="h1-5">Hello there!</h2>
+  
+  <p>I'm Michael, a web developer/designer, game developer, and programmer. I create things in the realm of technology, such as <a href="/games">games</a>, websites, programs, and so on. Check out my <a href="https://github.com/BlackBulletIV">GitHub profile</a> developer libraries, games, and other code-centric things I've made available to the public.</p>
+  
+  <p>If you're interested, here's a list of some things I can work with reasonably well at the moment, listed in decreasing proficiency. Note that this changes all the time as I learn new things, and others fall into disuse.</p>
+  
+  <p>
+    <strong>Programming languages</strong><br />
+    Lua, ActionScript, HTML, CSS, JavaScript, C++, PHP, SQL
+  </p>
 
-<p class="large-para">I'm Michael, a web developer/designer, game developer, programmer, and in general, a technology enthusiast. I create websites, games, programs, and other things in the realms of technology. Want to learn more? Check out the <a href="/about">about page</a>.</p>
-
-<div class="span-8">
-  Be sure to check out my <a href="/blog">blog</a>, on which I post tutorials, updates on projects, and other things. For other outlets of mine, you can find me on <a href="http://twitter.com/BlackBulletIV">Twitter</a> and <a href="http://youtube.com/BlackBulletIV">YouTube</a>.
+  <p>
+    <strong>Engines/frameworks/CMSs</strong><br />
+    <a href="http://flashpunk.net">FlashPunk</a>, <a href="http://love2d.org">LÖVE</a>, <a href="http://jekyllrb.com">Jekyll</a>, <a href="http://joomla.org">Joomla</a>, <a href="http://wordpress.org">WordPress</a>
+  </p>
 </div>
 
-<div class="span-8">
-  On <a href="http://github.com/BlackBulletIV">GitHub</a> you can find the source code for many of the open source things I'm working on, or have worked on. Most of it either being code for developers, or open source games I've released. On the <a href="/projects">projects page</a> you'll find pages for some of them (the ones I think are worth showing). Check it out and see what you can find.
-</div>
-
-<div class="span-8 last">
-  I have an interest in most everything creative: art, music, video, and especially games, which in many ways brings them all together. You can find the games I've released on the <a href="/games">games</a> page. For now these are just <a href="http://ludumdare.com">Ludum Dare</a> entries or experiments, but more will come eventually.
-</div>
-
-<div class="span-24">
+<div class="span-13 push-1 last">
   <h2 class="h1-5">Latest Posts</h2>
 
   {% assign posts = site.posts %}
-  {% assign listing_limit = 5 %}
-  {% include post-listing.html %}
+  {% assign listing_limit = 6 %}
+  {% include compact-post-listing.html %}
 </div>
