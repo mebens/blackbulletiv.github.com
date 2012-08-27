@@ -1,4 +1,4 @@
-This website's code is licensed under the MIT license (listed below). The code examples on this website are public domain, unless otherwise stated. Finally, the posts and all other content are licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+This website's code is licensed under the MIT license (listed below). The code samples are public domain, unless otherwise stated. Finally, the posts, images, and all other content are licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
 
 MIT License
 -----------------------------------
