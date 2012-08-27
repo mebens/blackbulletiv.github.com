@@ -19,7 +19,7 @@ If you haven't read [part one](/2012/08/27/lua-for-programmers-part-1) already, 
 
 ## Tables
 
-Tables are essentially associative arrays, and are the only data structures in Lua. Its values can be indexed with keys of any type, not just numbers, and in addition, they maintain the order of items. Tables are incredibly flexible, and are used all the time in Lua, so knowledge of them is essential.
+Tables are essentially associative arrays, and are the only data structures in Lua. Its values can be indexed with keys of any type, not just numbers. Tables are incredibly flexible, and are used all the time in Lua, so knowledge of them is essential.
 
 Here's an example of how to use them:
 
@@ -136,7 +136,6 @@ Programming in Lua's [section on strings](http://www.lua.org/pil/2.4.html) lists
 The standard library provides the [`string`](http://www.lua.org/manual/5.1/manual.html#5.4) module for working with strings. Let's take a look at a few of the more simple functions:
 
 {% highlight lua %}
-string.len("foo") -- 3
 string.lower("HeLLO") -- hello
 string.upper("Hello") -- HELLO
 string.reverse("world") -- dlrow

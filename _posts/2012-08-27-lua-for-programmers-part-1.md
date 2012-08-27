@@ -27,6 +27,8 @@ In case you didn't already know, Lua is an [interpreted programming language](ht
 
 Two resources that I would recommend for further learning of Lua is the [Programming in Lua](http://lua.org/pil) book (they have the first edition available online) coupled with the [manual](http://www.lua.org/manual/5.2). However, since Lua 5.1 is still the dominant Lua version, I'll be referring to the [5.1 manual](http://www.lua.org/manual/5.1).
 
+A couple other websites you might find useful are the [lua-users wiki](http://lua-users.org/wiki/), and the [Unofficial Lua FAQ](http://www.luafaq.org/).
+
 If you've downloaded Lua and run it from the terminal you'll be able to use an interactive interpreter. This is a very handy tool for learning and experimentation. Here's an example:
 
 {% highlight lua %}
