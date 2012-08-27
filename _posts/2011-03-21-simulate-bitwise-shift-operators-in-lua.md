@@ -17,7 +17,7 @@ The fact that Lua doesn't have bitwise operators is a pain. There are pure Lua i
 
 By my analysis of how the left-shift operator works, for every shift, it multiplies the number by the specified power of two. It's hard to put into words, show let me show you:
 
-{% highlight c %}
+{% highlight cpp %}
 // even
 20 << 1 == 40
 20 << 2 == 80
@@ -68,7 +68,7 @@ math.floor(20 / 2 ^ 3) == 2
 
 And traditional code would be:
 
-{% highlight c %}
+{% highlight cpp %}
 20 >> 1 == 10
 20 >> 3 == 2
 {% endhighlight %}

@@ -24,7 +24,7 @@ All this equates to a feeling of inconsistency when your own code is OOP, but th
 
 This is a syntax inconsistency. PHP contains an `elseif` keyword, which is the same as `else if`. For some reason, it's encouraged that you use `elseif`, maybe because a slight performance increase, I don't know. But anyway, `else if` is what you use in C; it's a result from C's block syntax:
 
-{% highlight c %}
+{% highlight cpp %}
 // all these are the same...
 
 else if (something)

@@ -20,7 +20,7 @@ For those who don't know what much about ASCII codes, I'll give you a quick intr
 
 The characters given in the ASCII table are how things are sorted alphabetically. So for example, 'B' (which is 66) comes before 'a' (97). This allows us to determine whether a string should come before another string by just checking whether its ASCII code is less than the other's code:
 
-{% highlight c %}
+{% highlight cpp %}
 int x = 66; // B
 int y = 97; // a
 if (x < y) ...
@@ -28,7 +28,7 @@ if (x < y) ...
 
 With this knowledge we can also get the next or previous character in alphabetical order simply by adding or subtracting by 1:
 
-{% highlight c %}
+{% highlight cpp %}
 int x = 66; // B
 int y = 97;
 x--; // x is now 'A'
@@ -39,7 +39,7 @@ y++; // y is now 'b'
 
 We can also check whether a character is upper or lower case, by checking whether its code is between a certain range. For upper-case, this range goes from 65 to 90; for lower-case it's 97 to 122. Therefore we can do this:
 
-{% highlight c %}
+{% highlight cpp %}
 x = 66; // B
 y = 97; // a
 if (x >= 65 && x <= 90) ... // it's upper
@@ -50,7 +50,7 @@ if (y >= 97 && x <= 122) ... // it's lower
 
 Now there's a cool relationship between upper and lower case characters: if you want to get the upper-case equivalent of a lower-case character, simply subtract 32 off its code. The same goes upper-case to lower-case, except the other way round. Therefore we can do this:
 
-{% highlight c %}
+{% highlight cpp %}
 x = 66; // B
 y = 97; // a
 x += 32; // x is now 'b'

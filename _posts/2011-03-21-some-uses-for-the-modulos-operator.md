@@ -61,7 +61,7 @@ end
 
 And for those of you who are wondering what on earth is going on, here's a Cish translation:
 
-{% highlight c %}
+{% highlight cpp %}
 for (int i = 0; i < slots; i++)
 {
   int row = floor(i / rowLength)
