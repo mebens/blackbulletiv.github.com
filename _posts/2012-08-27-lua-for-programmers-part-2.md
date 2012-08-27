@@ -12,7 +12,7 @@ tags:
 
 If you haven't read [part one](/2012/08/27/lua-for-programmers-part-1) already, I'd highly recommend doing so. For reference, here's a list of the parts in this series:
 
-* [Part 1: Language Essentials](/2012/08/27/lua-for-programmers-part-1), the current part; it covers fundamental syntax and concepts such as operators, loops, and functions.
+* [Part 1: Language Essentials](/2012/08/27/lua-for-programmers-part-1), covers fundamental syntax and concepts such as operators, loops, and functions.
 * Part 2: Data and Standard Libraries, the current part; covers Lua's built-in data types and some of the standard libraries.
 * Part 3: More Advanced Concepts (not yet published), deals with things like iterators, metatables, and variable scope.
 * Part 4: Tips and Tricks (not yet published), covers a number of little things that are handy to know.
@@ -89,7 +89,7 @@ for index, value in ipairs(b) do
 end
 {% endhighlight %}
 
-[`pairs`](http://www.lua.org/manual/5.1/manual.html#pdf-pairs) is an iterator function which loops through each item and gives you both the key and the value. [`ipairs`](http://www.lua.org/manual/5.1/manual.html#pdf-ipairs) is like `pairs` except it only loops through items with indices. Here's what that example outputs when run:
+[`pairs`](http://www.lua.org/manual/5.1/manual.html#pdf-pairs) is an iterator function which loops through each item and gives you both the key and the value. [`ipairs`](http://www.lua.org/manual/5.1/manual.html#pdf-ipairs) is like `pairs` except it only loops through items with indices, starting at 1 and continuing until it encounters a `nil` value. Here's what that example outputs when run:
 
 {% highlight text %}
 y    300

@@ -14,7 +14,7 @@ In this series we'll be taking a look at most everything you should know to prog
 
 Here's an overview of the four parts the compose the series:
 
-* Part 1: Language Essentials, the current part; it covers fundamental syntax and concepts such as operators, loops, and functions.
+* Part 1: Language Essentials, the current part; covers fundamental syntax and concepts such as operators, loops, and functions.
 * [Part 2: Data and Standard Libraries](/2012/08/27/lua-for-programmers-part-2), covers Lua's built-in data types and some of the standard libraries.
 * Part 3: More Advanced Concepts (not yet published), deals with things like iterators, metatables, and variable scope.
 * Part 4: Tips and Tricks (not yet published), covers a number of little things that are handy to know.
@@ -151,7 +151,7 @@ This loop has the following syntax:
 
 {% highlight lua %}
 for var = start, limit, step do
-  ...
+  -- code here
 end
 {% endhighlight %}
 
@@ -161,7 +161,7 @@ The equivalent `while` loop would be:
 var = start
 
 while var <= limit do
-  ...
+  -- code here
   var = var + step
 end
 {% endhighlight %}
