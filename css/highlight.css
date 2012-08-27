@@ -1,15 +1,16 @@
+/* original comment color: #bc9458 */
 .hll { background-color: #e6e1dc }
-.c { color: #bc9458; font-style: italic } /* Comment */
+.c { color: #969696; font-style: italic } /* Comment */
 .err { color: #ffc66d } /* Error */
 .k { color: #cc7833 } /* Keyword */
 .n { color: #f0f0f0 } /* Name */
-.o { color: #f0f0f0 } /* Operator */
+.o { color: #cc7833 } /* Operator */
 .p { color: #f0f0f0 } /* Punctuation */
-.cm { color: #bc9458; font-style: italic } /* Comment.Multiline */
-.cp { color: #bc9458; font-style: italic } /* Comment.Preproc */
-.c1 { color: #bc9458; font-style: italic } /* Comment.Single */
-.cs { color: #bc9458; font-style: italic } /* Comment.Special */
-.kc { color: #cc7833 } /* Keyword.Constant */
+.cm { color: #969696; font-style: italic } /* Comment.Multiline */
+.cp { color: #969696; font-style: italic } /* Comment.Preproc */
+.c1 { color: #969696; font-style: italic } /* Comment.Single */
+.cs { color: #969696; font-style: italic } /* Comment.Special */
+.kc { color: #6d9cbe } /* Keyword.Constant */
 .kd { color: #cc7833 } /* Keyword.Declaration */
 .kn { color: #cc7833 } /* Keyword.Namespace */
 .kp { color: #cc7833 } /* Keyword.Pseudo */
