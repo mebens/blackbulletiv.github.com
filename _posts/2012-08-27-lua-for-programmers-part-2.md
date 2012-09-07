@@ -14,7 +14,7 @@ If you haven't read [part one](/2012/08/27/lua-for-programmers-part-1) already, 
 
 * [Part 1: Language Essentials](/2012/08/27/lua-for-programmers-part-1), covers fundamental syntax and concepts such as operators, loops, and functions.
 * Part 2: Data and Standard Libraries, the current part; covers Lua's built-in data types and some of the standard libraries.
-* Part 3: More Advanced Concepts (not yet published), deals with things like iterators, metatables, and variable scope.
+* [Part 3: More Advanced Concepts](/2012/09/07/lua-for-programmers-part-3), deals with things like variable scope, advanced functions, and file loading.
 * Part 4: Tips and Tricks (not yet published), covers a number of little things that are handy to know.
 
 ## Tables
@@ -74,7 +74,7 @@ The main thing you need to know is that Lua is different from most languages whe
 
 ### Generic `for` Loop
 
-Now that we know about tables, we can take a look at Lua's final loop type: generic `for`. As [Programming in Lua](http://www.lua.org/pil/4.3.5.html) states, it "allows you to traverse all values returned by an iterator function." The details of implementing an iterator function, and how this all works is a little complicated (we'll deal with this in part three), but using it with tables is very simple. Here's some examples:
+Now that we know about tables, we can take a look at Lua's final loop type: generic `for`. As [Programming in Lua](http://www.lua.org/pil/4.3.5.html) states, it "allows you to traverse all values returned by an iterator function." The details of implementing an iterator function, and how this all works is a little complicated, but using it with tables is very simple. Here's some examples:
 
 {% highlight lua %}
 a = { x = 400, y = 300, [20] = "foo" }
@@ -176,4 +176,4 @@ The [`math`](http://www.lua.org/manual/5.1/manual.html#5.6) module contains many
 
 There's many other parts of the library that I haven't covered, such as the [`os`](http://www.lua.org/manual/5.1/manual.html#5.8), [`io`](http://www.lua.org/manual/5.1/manual.html#5.7), and [`coroutine`](http://www.lua.org/manual/5.1/manual.html#5.2) modules. I recommend taking a look at the [manual's index](http://www.lua.org/manual/5.1/index.html#index) for documentation on the entire standard library.
 
-This part and the previous part have covered the absolute essentials of Lua. Be sure to check part three to delve a bit deeper into the language. As always, if you have any feedback, I'd love to hear from you.
+This part and the previous part have covered the absolute essentials of Lua. Be sure to check [part three](/2012/09/07/lua-for-programmers-part-3) to delve a bit deeper into the language. As always, if you have any feedback, I'd love to hear from you.

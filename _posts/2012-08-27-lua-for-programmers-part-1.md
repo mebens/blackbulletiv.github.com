@@ -16,7 +16,7 @@ Here's an overview of the four parts the compose the series:
 
 * Part 1: Language Essentials, the current part; covers fundamental syntax and concepts such as operators, loops, and functions.
 * [Part 2: Data and Standard Libraries](/2012/08/27/lua-for-programmers-part-2), covers Lua's built-in data types and some of the standard libraries.
-* Part 3: More Advanced Concepts (not yet published), deals with things like iterators, metatables, and variable scope.
+* [Part 3: More Advanced Concepts](/2012/09/07/lua-for-programmers-part-3), deals with things like variable scope, advanced functions, and file loading.
 * Part 4: Tips and Tricks (not yet published), covers a number of little things that are handy to know.
 
 ## What is Lua?
@@ -66,7 +66,7 @@ else
 end
 {% endhighlight %}
 
-There's a small example of Lua syntax. Lua doesn't use semicolons, nor curly braces. However, it does have braces of sort in the form of keywords like `then` and `do`. The code above also demonstrates conditional statements.
+There's a small example of Lua syntax. Lua doesn't use semicolons, nor curly braces. However, it does have braces of a sort in the form of keywords like `then` and `do`. The code above also demonstrates conditional statements.
 
 ## Variables and Types
 
@@ -209,9 +209,9 @@ end
   
 That's how you declare functions. As you can see, the order of declaration in a file doesn't matter as it does in some compiled languages such as C and C++. There are three things I want to point out:
 
-* Lua is a bit different in how local variables are declared. If you want to do so, you need to prefix the declaration with the `local` keyword. We'll learn more about this and variable scopes in part three.
-* As demonstrated, functions can return multiple values. `foo` demonstrates how to capture these values.
-* Default arguments aren't directly supported, but there are ways of achieving the same effect which we'll see in part three.
+* Lua is a bit different in how local variables are declared. If you want to do so, you need to prefix the declaration with the `local` keyword. We'll learn more about variable scope in [part three](/2012/09/07/lua-for-programmers-part-3).
+* Functions can return multiple values. `foo` demonstrates how to capture these values.
+* Default arguments aren't directly supported, but there are ways of achieving the same effect which we'll see in [part three](/2012/09/07/lua-for-programmers-part-3).
 
 ## Conclusion
 
