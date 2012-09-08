@@ -10,7 +10,7 @@ tags:
   - Lua
 ---
 
-In this post, I'll attempt to give you my personal guide on what are some good steps for getting started with the [Love2D](http://love2d.org) game engine (the proper name is LÖVE, which I'll be using from now on). It's not perfect, of course, but I hope you find it useful. If you have any comments or suggestions, please leave it the [comments section](#respond) below.
+In this post, I'll attempt to give you my personal guide on some good steps to getting started with the [Love2D](http://love2d.org) game engine (the proper name is LÖVE, which I'll be using from now on). It's not perfect, of course, but I hope you find it useful. If you have any feedback, I'd love to hear from you in the [comments](#respond).
 
 ## What is LÖVE?
 
@@ -24,7 +24,13 @@ So, if you want to learn how to use LÖVE, read on.
 
 First thing to do is go and download the engine for your operating system over at [its homepage](http://love2d.org). Then proceed to install it. You'll probably want install Lua as well; you can get it from the [download page](http://www.lua.org/download.html), this will allow you to play around with Lua interactively using the `lua` command. You don't have install Lua to run games however, as Lua is included inside of LÖVE.
 
-Next make sure you've got a text editor on your system. For Windows, [Notepad++](http://notepad-plus-plus.org/) seems to be a good free one. On Mac you can get [TextWrangler](http://www.barebones.com/products/textwrangler/) if you want something that's good for free; if you get more serious in anything with programming I would highly recommend you buy [TextMate](http://macromates.com). For Linux, [gedit](http://projects.gnome.org/gedit/) comes pre-loaded on Ubuntu and similar Linux distros; as far as I know it supports Lua out of the box.
+Next, make sure you've got a text editor installed. Here's a few of my recommendations:
+
+* [Notepad++](http://notepad-plus-plus.org/): free, for Windows.
+* [TextWrangler](http://www.barebones.com/products/textwrangler/): free, for Mac.
+* [Sublime Text 2](http://www.sublimetext.com/2): paid, for all platforms.
+* [gedit](http://projects.gnome.org/gedit/): comes pre-loaded on Ubuntu and similar Linux distributions.
+* [TextMate](http://macromates.com): paid, for Mac. I'd personally recommend Sublime Text 2 over this.
 
 Next, if you're on a Mac, you'll want to do the following to make it easier to run games from the terminal. Open up your text editor with a file located at `~/.bash_profile` (you may have to do this with the Terminal) and copy the following into it:
 
@@ -34,25 +40,25 @@ If you placed `love.app` in the `Applications` folder, this will allow you to ru
 
 ## Lua
 
-The Lua programming language is how you'll tell LÖVE what to do. If you don't already know Lua, you'll definitely want to learn the fundamentals of it before diving into LÖVE. The official place to learn Lua is the [Programming in Lua book](http://lua.org/pil), written by the creator of Lua. I'm not really sure how friendly it is to non-programmers, but to anyone who has programmed a bit before, it shouldn't be hard at all.
+The Lua programming language is how you'll tell LÖVE what to do. If you don't already know Lua, you'll definitely want to learn the fundamentals of it before diving into LÖVE. If you've already got some programming experience, I'd recommend my [Lua for Programmers](/2012/08/27/lua-for-programmers-part-1/) series. The other place you could go is the official [Programming in Lua](http://lua.org/pil) book (often abbreviated as PIL).
 
-If PIL is too confusing for you, then try doing a search for a tutorial on Lua for beginners. You might to look up some information on programming in general, so as to make PIL more digestible.
+If you don't have any previous programming experience, the only place I can really point you to is Google and the afore mentioned book. You could also try getting a bit of experience in some other programming language and then come back to Lua.
 
 ## Game Structure
 
-Once you've got some Lua under your belt, you need to know what a LÖVE game is made of. Luckily, LÖVE places little requirements on how you structure your game. First you must create a folder and name it whatever you want. The one requirement is that there be a file named `main.lua` inside of this folder. `main.lua` is a Lua script which is run when the game starts up; from here you can load other scripts, resources, and so on. Finally, you must place everything your game needs to run (images, music, code, etc.) inside this folder.
+Once you've got some Lua under your belt, you need to know what a LÖVE game is made of. Fortunately, LÖVE places few requirements on how you structure your game. First, you must create a folder and name it whatever you want. Second, you must create a file inside this folder called `main.lua`. This Lua script is run when the game starts up; from here you can load other scripts, resources, and so on. Finally, you must place everything your game needs (images, music, code, etc.) inside this folder.
 
 ### .love Files
 
-One thing you'll need to know about when using LÖVE is .love files. These files are the standard way of packaging a game's folder into a single file. Really, they are just zip files of a game's folder, except renamed with a `.love` extension. This allows them to be double-clicked or dragged over the `love` executable or application and run.
+One thing you'll need to know about when using LÖVE is .love files. These files are the standard way of packaging a game's folder into a single file. Really, they are just zip files containing the contents of the game, except renamed with a `.love` extension. This allows them to be double-clicked or dragged over the `love` executable/application and run.
 
-There are two things to keep in mind. First is that your `main.lua` file must be top-level in the zip file. This means that you should zip the _contents_ of the game's folder, not _the folder itself_. Second is that inside a .love file, file a directory path names are case sensitive; so basically, don't rely on your filesystem's case insensitivity (this is the case Windows and Mac).
+There are two things to keep in mind. First, your `main.lua` file must be top-level in the zip file. This means that you should zip the _contents_ of the game's folder, not _the folder itself_. Second, file and directory path names inside a .love file are case sensitive; so you can't rely on your filesystem's case insensitivity.
 
 Now, here's how to make a .love file (information taken from the [wiki page on game distribution](http://love2d.org/wiki/Game_Distribution)):
 
 #### Windows
 
-* Create a zip file (built into XP, Vista, and 7).
+* Create a new zip file (built into XP, Vista, and 7).
 * Copy all the files from inside your game's folder into the new zip file. (If you make a zip file containing the game's _actual folder_, it won't work.)
 * Check that you can see file extensions. Press Alt, go to folder options, and make sure "Hide extensions for known file types" is unchecked.
 * Rename the zip file's extension from .zip to .love.
@@ -64,7 +70,7 @@ Now, here's how to make a .love file (information taken from the [wiki page on g
 * Then execute `zip -r ../${PWD}.love *`.
 * A .love file named the same as your game's folder will be located in your game's parent folder. So, if your game was located at `~/Projects/EpicGame` the file would be `~/Projects/EpicGame.love`.
 
-For more information on making .love files and distributing games, check out the [wiki page on game distribution](http://love2d.org/wiki/Game_Distribution).
+For more information on making .love files and distributing games, check out the [wiki page](http://love2d.org/wiki/Game_Distribution) on the subject.
 
 ## LÖVE's API
 
@@ -72,17 +78,24 @@ Well, with all that out of the way, your next task is starting to learn LÖVE's 
 
 The API is divided up into modules. Every module (which is just a table) lives inside the module (again a table) named `love`. Examples of modules are [`love.graphics`](http://love2d.org/wiki/love.graphics) and [`love.filesystem`](http://love2d.org/wiki/love.filesystem). Each of these modules contains functions which do certain things. For example, [`love.graphics.circle`](http://love2d.org/wiki/love.graphics.circle) allows you to draw a circle to the screen.
 
-Many modules also contain classes which serve a certain purpose, usually the storage and manipulation of some kind of data. For those who aren't familiar with object-oriented programming (OOP), jump down to the Object-Oriented Programming section below. Anyway, most of the time you will create instances of these classes with a function with a name beginning `new` followed by the class name (and this function is of course located in a module). For example, [`love.graphics.newImage`](http://love2d.org/wiki/love.graphics.newImage) creates a new instance of the [`Image`](http://love2d.org/wiki/Image) class.
+Many modules also contain classes which serve a certain purpose, usually the storage and manipulation of some kind of data. For those who aren't familiar with object-oriented programming (OOP), jump down to the Object-Oriented Programming section below. Most of the time you will create instances of these classes via a module function with a name beginning with `new` followed by the class name. For example, [`love.graphics.newImage`](http://love2d.org/wiki/love.graphics.newImage) creates a new instance of the [`Image`](http://love2d.org/wiki/Image) class.
 
 The first thing in the API you should take a look at is the callback functions located in the [`love`](http://love2d.org/wiki/love) module, which are called at key stages in the game loop. Have a look at the [tutorial for callbacks](http://love2d.org/wiki/Tutorial:Callback_Functions) on the wiki to get started.
 
-Once familiar with those, it's time to look at some modules. You don't have to learn them all, half of them you won't need for a simple game; it all depends on what you want to do. Firstly get familiar with [`love.graphics`](http://love2d.org/wiki/love.graphics); it would be the biggest module, and you don't need to know all of it. Probably the best things to take a look at are the drawing functions, and some of the classes.
+Once familiar with those, it's time to look at some modules. You don't have to learn them all, half of them you won't need for a simple game; it all depends on what you want to do. Firstly get familiar with [`love.graphics`](http://love2d.org/wiki/love.graphics); it may be the biggest module, but you don't need to know all of it. Probably the best things to take a look at are the drawing functions, and some of the classes.
 
-Next you'll want to at least familiarise yourself with how LÖVE handles files. Have a read of [`love.filesystem`](http://love2d.org/wiki/love.filesystem)'s description for that. You'll most likely want to take a look at the stuff in the module now as well.
+Next you'll want to at least familiarise yourself with how LÖVE handles files. Have a read of [`love.filesystem`](http://love2d.org/wiki/love.filesystem)'s description for that. You'll probably want to take a look at the stuff inside the module too.
 
-After this, I would say take a look at [`love.keyboard`](http://love2d.org/wiki/love.keyboard) for taking keyboard input, [`love.mouse`](http://love2d.org/wiki/love.mouse) for mouse input, and [`love.audio`](http://love2d.org/wiki/love.audio) for dealing with playing audio.
+After this, I'd say take a look at [`love.keyboard`](http://love2d.org/wiki/love.keyboard) for taking keyboard input, [`love.mouse`](http://love2d.org/wiki/love.mouse) for mouse input, and [`love.audio`](http://love2d.org/wiki/love.audio) for dealing with playing audio.
 
-That covers your essential modules. After this, take a look at the other modules if you need to do stuff more advanced. For example, if you need physics, you may want to use [`love.physics`](http://love2d.org/wiki/love.physics). Go and explore!
+That covers your essential modules. After this, take a look at the other modules if you need some more advanced functionality. For example, if you need physics, you may want to use [`love.physics`](http://love2d.org/wiki/love.physics).
+
+In summary:
+
+* [`love.graphics`](http://love2d.org/wiki/love.graphics)
+* [`love.filesystem`](http://love2d.org/wiki/love.filesystem)
+* [`love.keyboard`](http://love2d.org/wiki/love.keyboard), [`love.mouse`](http://love2d.org/wiki/love.mouse), and [`love.audio`](http://love2d.org/wiki/love.audio)
+* Explore the rest!
 
 ### Object-Oriented Programming
 
@@ -107,10 +120,10 @@ If you want to learn more about OOP, do some research on it on the web; the [wik
 
 ## The Community
 
-LÖVE's community is one of its many strong points. The community is very helpful, friendly, and usually quick to respond. If you ever get stuck, make sure you head over the active [forums](http://love2d.org/forums) and ask for help in the [Support and Development area](http://love2d.org/forums/viewforum.php?f=4) (make sure you read the [rules](http://love2d.org/forums/viewtopic.php?f=4&t=2982) first of course!). There's also an IRC channel, located at [#love@irc.freenode.net](http://webchat.freenode.net/?channels=love&uio=d4) which usually has a good amount of people there.
+LÖVE's community is one of its many strong points. The community is very helpful, friendly, and usually quick to respond. If you ever get stuck, make sure you head over to the [forums](http://love2d.org/forums) and ask for help in the [Support and Development area](http://love2d.org/forums/viewforum.php?f=4) (be sure to read the [rules](http://love2d.org/forums/viewtopic.php?f=4&t=2982) first!). There's an IRC channel too, located at [#love@irc.freenode.net](http://webchat.freenode.net/?channels=love&uio=d4); it usually has a good amount of people there.
 
 ## Conclusion
 
-Well, thanks a lot for reading. I hope this has helped you in some way. As said before, if you have any comments or suggestions please leave it below in the [comments](#respond).
+Well, thanks a lot for reading. I hope this has helped you in some way. As said before, if you have any feedback be sure to leave me a [comment](#respond).
 
 Have fun!
