@@ -12,7 +12,7 @@ tags:
 
 ---
 
-When making a game in Love2D, you'll probably end up needing to customise the mouse cursor. As I recently had to do just that, I thought I'd make a quick tutorial on it. If you want an example cursor, here's the [crosshair](/images/posts/crosshair.png) I'm using in a game right now.
+When making a game in [LÖVE](http://love2d.org), you'll probably end up needing to customise the mouse cursor. As I recently had to do just that, I thought I'd make a quick tutorial on it. If you want an example cursor, here's the [crosshair](/images/posts/crosshair.png) I'm using in a game right now.
 
 Now, all of what we need is contained within the [`love.mouse`](https://love2d.org/wiki/love.mouse) module. The first step is to hide the mouse with [`love.mouse.setVisible`](https://love2d.org/wiki/love.mouse.setVisible). You'll probably want to do this in [`love.load`](https://love2d.org/wiki/love.load):
 
@@ -47,6 +47,6 @@ function love.draw()
 end
 {% endhighlight %}
 
-You might be wondering why I've subtracted half the image's width/height from the coordinates. In this case it's because when using something like a crosshair, the centre, not the top left, of the cursor image should indicate the exact point where the mouse is.
+You might be wondering why I've subtracted half the image's width/height from the coordinates. In this case it's because when using something like a crosshair, the centre, not the top-left, of the cursor image should indicate the exact point where the mouse is. Note that if you want to replicate a normal cursor (such as the default one provided by your operating system) you'll need to draw the image from the top-left, as we saw in the first `love.draw` example.
 
 Well, that's it for now. I hope this tutorial's been useful to you.
