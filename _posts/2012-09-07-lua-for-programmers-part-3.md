@@ -15,7 +15,7 @@ If you haven't read [part one](/2012/08/27/lua-for-programmers-part-1) and [two]
 * [Part 1: Language Essentials](/2012/08/27/lua-for-programmers-part-1), covers fundamental syntax and concepts such as operators, loops, and functions.
 * [Part 2: Data and Standard Libraries](/2012/08/27/lua-for-programmers-part-2), covers Lua's built-in data types and some of the standard libraries.
 * Part 3: More Advanced Concepts, the current part; deals with things like variable scope, advanced functions, and file loading.
-* Part 4: Tips and Tricks (not yet published), covers a number of little things that are handy to know.
+* [Part 4: Tips and Tricks](/2012/09/09/lua-for-programmers-part-4), a collection of small things that you may find useful.
 
 ## Blocks and Scope
 
@@ -247,6 +247,6 @@ Metatables are a very powerful and flexible feature of Lua that allow you to mod
 
 ## Conclusion
 
-As with the last part, there are many things I didn't cover that you might want to check out yourself; some examples are [iterators](http://www.lua.org/pil/index.html#7), [coroutines](http://www.lua.org/pil/index.html#9), and [error handling](http://www.lua.org/pil/index.html#8).
+As with the last part, there are many things I didn't cover that you might want to check out yourself; some examples are [iterators](http://www.lua.org/pil/index.html#7), [coroutines](http://www.lua.org/pil/index.html#9), and [error handling](http://www.lua.org/pil/index.html#8). Be sure to check out the [final part](/2012/09/09/lua-for-programmers-part-4) of the series too.
 
-Be sure to check out the final part of the series for some small tips and tricks you may want to know. As always, if you have any feedback, I'd love to hear from you.
+As always, if you have any feedback, I'd love to hear from you.

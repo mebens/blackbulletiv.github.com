@@ -17,7 +17,7 @@ Here's an overview of the four parts the compose the series:
 * Part 1: Language Essentials, the current part; covers fundamental syntax and concepts such as operators, loops, and functions.
 * [Part 2: Data and Standard Libraries](/2012/08/27/lua-for-programmers-part-2), covers Lua's built-in data types and some of the standard libraries.
 * [Part 3: More Advanced Concepts](/2012/09/07/lua-for-programmers-part-3), deals with things like variable scope, advanced functions, and file loading.
-* Part 4: Tips and Tricks (not yet published), covers a number of little things that are handy to know.
+* [Part 4: Tips and Tricks](/2012/09/09/lua-for-programmers-part-4), a collection of small things that you may find useful.
 
 ## What is Lua?
 
