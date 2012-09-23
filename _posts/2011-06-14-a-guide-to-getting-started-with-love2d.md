@@ -120,7 +120,7 @@ If you want to learn more about OOP, do some research on it on the web; the [wik
 
 ## The Community
 
-LÖVE's community is one of its many strong points. The community is very helpful, friendly, and usually quick to respond. If you ever get stuck, make sure you head over to the [forums](http://love2d.org/forums) and ask for help in the [Support and Development area](http://love2d.org/forums/viewforum.php?f=4) (be sure to read the [rules](http://love2d.org/forums/viewtopic.php?f=4&t=2982) first!). There's an IRC channel too, located at [#love@irc.freenode.net](http://webchat.freenode.net/?channels=love&uio=d4); it usually has a good amount of people there.
+LÖVE's community is one of its many strong points. The community is very helpful, friendly, and usually quick to respond. If you ever get stuck, make sure you head over to the [forums](http://love2d.org/forums) and ask for help in the [Support and Development area](http://love2d.org/forums/viewforum.php?f=4) (be sure to read the [rules](http://love2d.org/forums/viewtopic.php?f=4&t=2982) first!). There's an IRC channel too, located at [#love@irc.oftc.net](http://en.irc2go.com/webchat/?net=OFTC&room=love); it usually has a good amount of people there.
 
 ## Conclusion
 
