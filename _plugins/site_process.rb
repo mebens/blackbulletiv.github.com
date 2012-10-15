@@ -1,5 +1,3 @@
-require 'growl'
-
 module Jekyll
   class Site
     def process
@@ -14,9 +12,6 @@ module Jekyll
       
       self.cleanup
       self.write
-      
-      # Growl
-      Growl.notify "Build complete.", :title => "Jekyll"
     end
   end
 end

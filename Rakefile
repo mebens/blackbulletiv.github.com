@@ -27,7 +27,7 @@ task :new do
     f.puts ""
   end
   
-  `open -a "Sublime Text 2" #{path}`
+  `subl -n #{path}`
   exit
 end
 
