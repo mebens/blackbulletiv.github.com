@@ -60,11 +60,11 @@ x.reuseable # valid method call
 x.more_reuseable_stuff(4) # 36
 {% endhighlight %}
 
-With this, functionality in the mixin can be included from anyway, which is wonderful for keeping code DRY (Don't Repeat Yourself).
+With this, functionality in the mixin can be included from anywhere, which is wonderful for keeping code DRY (Don't Repeat Yourself).
 
 ## Powerful
 
-Seriously, Ruby is jolly powerful. It comes packed with many awesome, easy-to-use classes, and a huge standard library. The standard library even includes a the WEBrick web server, and a network library for sockets, and HTTP, FTP, and a number of other protocols.
+Seriously, Ruby is really powerful. It comes packed with many awesome, easy-to-use classes, and a huge standard library. The standard library even includes the WEBrick web server, and a network library for sockets, and HTTP, FTP, and a number of other protocols.
 
 Ruby has a lot to offer for string processing as well. It's got regular expressions built right in, and the String class has over 100 methods to help out. Let's take a look at a nice little example:
 
