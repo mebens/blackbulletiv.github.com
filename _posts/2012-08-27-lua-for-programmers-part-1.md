@@ -171,7 +171,7 @@ end
 Or in a C `for` loop:
 
 {% highlight cpp %}
-for (int i = start; i <= limit; i += step) {}
+for (int var = start; var <= limit; var += step) {}
 {% endhighlight %}
 
 Remember that `step` also takes negative numbers, so you can progress backwards too.
