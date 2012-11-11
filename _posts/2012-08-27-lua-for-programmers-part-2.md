@@ -117,7 +117,7 @@ table.sort(t) -- sorts via < operator
 Strings work as you'd expect; you can declare them with double or single quotes, and use backslash to escape characters. For strings spanning multiple lines you can use square brackets in the format `[[...]]`. Here's an example:
 
 {% highlight lua %}
-s = "foo\tbar"
+s = "foo\nbar"
 t = 'he said "hello world"'
 u = "Hello \"world\""
 v = [[
@@ -150,7 +150,7 @@ string.gsub("hello 42", "(%d+)", "%1 3") -- hello 42 3
 string.gsub("heLLo", "(%u)", "") -- heo
 
 -- 4 + 4 = 8
-string.gsub("2 + 2 = 4", "(%d)", function (s)
+string.gsub("2 + 2 = 4", "(%d)", function(s)
   return s * 2
 end)
 
