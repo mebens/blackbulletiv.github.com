@@ -1,6 +1,8 @@
 task :default => :build
 
 task :build do
+  `rm -R _oldsite`
+  `cp -R _site _oldsite`
   system("jekyll")
 end
 

@@ -1,5 +1,7 @@
 _site
+_oldsite
 _drafts
 images/host
 .DS_STORE
 .sass-cache
+upload.rb
