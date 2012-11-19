@@ -4,4 +4,4 @@ _drafts
 images/host
 .DS_STORE
 .sass-cache
-upload.rb
+ftp-info.txt

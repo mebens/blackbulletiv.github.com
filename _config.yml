@@ -5,7 +5,7 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title
 paginate: 10
-exclude: ["Rakefile", "upload.rb", "LICENSE.txt", "README.md", "CNAME"]
+exclude: ["Rakefile", "upload.rb", "ftp-info.txt", "LICENSE.txt", "README.md", "CNAME"]
 title: Michael Ebens
 url: http://nova-fusion.com
 github_user: BlackBulletIV

@@ -1,9 +1,18 @@
 task :default => :build
+task :all => [:build, :upload]
 
-task :build do
-  `rm -R _oldsite`
-  `cp -R _site _oldsite`
-  system("jekyll")
+task :build => :oldsite do
+  sh "jekyll"
+end
+
+task :upload do
+  require_relative "upload"
+  upload
+end
+
+task :oldsite do
+  sh "rm -R _oldsite"
+  sh "cp -R _site _oldsite"
 end
 
 task :new do
@@ -29,7 +38,7 @@ task :new do
     f.puts ""
   end
   
-  `subl -n #{path}`
+  sh "subl -n #{path}"
   exit
 end
 
