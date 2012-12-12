@@ -1,13 +1,14 @@
 task :default => :build
 task :all => [:build, :upload]
 
-task :build => :oldsite do
+task :build do
   sh "jekyll"
 end
 
 task :upload do
   require_relative "upload"
   upload
+  Rake::Task["oldsite"].invoke
 end
 
 task :oldsite do

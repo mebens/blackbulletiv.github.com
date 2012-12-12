@@ -1,6 +1,6 @@
 module Jekyll
   class TagCloud < Liquid::Tag
-    @@max_size = 280
+    @@max_size = 220
     @@min_size = 75
     safe = true
     
