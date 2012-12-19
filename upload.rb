@@ -14,7 +14,7 @@ def process(file)
         raise unless e.message[0, 3].to_i == 550 # error code
       end
       
-      print "#{file}\n" if $verbose
+      print "#{file}\n" unless $quiet
     end
     
     Dir.foreach(path) { |f| process("#{file}/#{f}") if path_ok?(f) }
@@ -33,7 +33,7 @@ def process(file)
         $ftp.puttextfile(path, file)
       end
       
-      print "#{file}\n" if $verbose
+      print "#{file}\n" unless $quiet
     end
   end
 end
@@ -45,7 +45,7 @@ end
 def upload
   $ignore = [".", "..", ".DS_STORE", ".DS_Store"]
   $page_regex = /^page\d+$/
-  $verbose = ARGV[0] == "-v"
+  $quiet = ARGV[0] == "-q"
   $ftp_info = IO.readlines("ftp-info.txt")
 
   $ftp = Net::FTP.new($ftp_info[0].chomp, $ftp_info[1].chomp, $ftp_info[2].chomp)
