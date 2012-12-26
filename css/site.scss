@@ -217,8 +217,10 @@ code, tt {
 // Games
 
 .game-left, .game-middle, .game-right {
-  width: 226px;
+  width: 220px;
   float: left;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .game-left {
@@ -226,12 +228,7 @@ code, tt {
 }
 
 .game-middle {
-  margin-left: 5px;
   margin-right: 5px;
-}
-
-.game-right {
-  margin-left: 5px;
 }
 
 // Little Classes
