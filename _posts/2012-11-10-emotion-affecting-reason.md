@@ -14,9 +14,9 @@ I've recently been musing about how emotion can affect a person's reason. You se
 
 So I was thinking, how can one avoid the subtle effects of emotion when attempting to reason through something. Say you're trying to find the truth of a matter by piecing together evidence. You're not in a perfect mood, being mildly annoyed and tired. This emotional state has the potential to affect your reasoning process, probably not much, but the effect is still there.
 
-I like to think of the process of reasoning as a scientific experiment. In these experiments, there is always a measure of experimental error, due the nature of measuring instruments, imperfections in substances, and so on. This is uncontrollable, but it can be reduced significantly when care is taken to do so. When reasoning, I see emotion, bias, etc., as an error; you can't eliminate it completely, but you can reduce it.
+I like to think of the reasoning process as a scientific experiment. When conducting scientific experiments, there is always a measure of experimental error, due to the nature of measuring instruments, slight imperfections in substances, and so on. This can't be eliminated completely, but it can be reduced significantly when care is taken to do so. When reasoning, I see emotion, bias, etc., as an error; you can't eliminate it completely, but you can reduce it.
 
-So, what can be done to reduce it? The main thing is using a high level of introspection; an awareness of your own emotional state helps to isolate those feelings when engaging in the process of reason. Being aware of your own emotions gives a great measure of control over them.
+So, what can be done to reduce it? The main thing is using a high level of introspection; an awareness of your own emotional state helps to isolate those feelings when reasoning. Being aware of your own emotions gives you a great measure of control over them.
 
 One thing that's done in scientific experiments is to repeat the experiment multiple times. When dealing with a serious issue, it pays to think it through again, at different times; you'll probably be in a different emotional state the next day.
 
