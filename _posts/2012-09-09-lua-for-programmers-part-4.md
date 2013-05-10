@@ -28,7 +28,7 @@ for i, v in ipairs(arg) do print(v) end
 
 And we ran it via `lua foo.lua arg1 arg2 arg3`, the output would be:
 
-{% highlight txt %}
+{% highlight text %}
 lua foo.lua
 arg1
 arg2
