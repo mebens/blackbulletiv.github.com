@@ -19,7 +19,7 @@ If you haven't read [part one](/2012/08/27/lua-for-programmers-part-1) already, 
 
 ## Tables
 
-Tables are essentially associative arrays, and are the only data structures in Lua. Its values can be indexed with keys of any type, not just numbers. Tables are incredibly flexible, and are used all the time in Lua, so knowledge of them is essential.
+Tables are essentially associative arrays which can have keys and values of any type. Tables are incredibly flexible, and are the _only_ data structure in Lua, so knowledge of them is crucial.
 
 Here's an example of how to use them:
 
@@ -70,7 +70,7 @@ print(#a) -- 4
 
 If you don't supply keys along with values when creating a table they will be automatically assigned indices. Also notice how the length operator returns the number of elements in a table.
 
-The main thing you need to know is that Lua is different from most languages when it comes to indices; they start at 1 rather than 0. That means that instead of half-open ranges (`[0, length)`), closed ranges (`[1, length]`) are used. This concept is built into Lua at multiple levels, so although it's possible to still use indices starting at 0, it's highly impractical.
+Lua is different from most languages when it comes to indices; they start at 1 rather than 0. That means that instead of half-open ranges (`[0, length)`), closed ranges (`[1, length]`) are used. This concept is built into Lua at multiple levels, so although it's possible to still use indices starting at 0, it's highly impractical.
 
 ### Generic `for` Loop
 
@@ -109,7 +109,7 @@ t = { 24, 25, 8, 13, 1, 40 }
 table.insert(t, 50) -- inserts 50 at end
 table.insert(t, 3, 89) -- inserts 89 at index 3
 table.remove(t, 2) -- removes item at index 2
-table.sort(t) -- sorts via < operator 
+table.sort(t) -- sorts via the < operator 
 {% endhighlight %}
 
 ## Strings
@@ -129,7 +129,7 @@ v = [[
 ]]
 {% endhighlight %}
 
-Programming in Lua's [section on strings](http://www.lua.org/pil/2.4.html) lists all the escape characters and more information.
+Programming in Lua's [section on strings](http://www.lua.org/pil/2.4.html) lists all the escape characters and gives more information.
 
 ### `string` module
 
@@ -162,7 +162,7 @@ end
 
 ## Numbers and Maths
 
-Numbers are quite simple in Lua. There's no distinction between doubles, floats, integers, or unsigned integers; everything is a double (or, double-precision floating-point). [Programming in Lua](http://www.lua.org/pil/2.3.html) states that doubles have no rounding errors when representing integers, and are also very efficient on modern CPUs. All numbers being the same type means that you don't have to worry about any subtleties with type conversion when performing arithmetic.
+Numbers are quite simple in Lua. There's no distinction between doubles, floats, integers, or unsigned integers; everything is a double (or, double-precision floating-point). [Programming in Lua](http://www.lua.org/pil/2.3.html) states that doubles have no rounding errors when representing integers, and are also very efficient on modern CPUs. Since all numbers are the same type, there's no type conversion to worry about when performing arithmetic.
 
 Here's a few examples of how numbers can be written: `4`, `0.4`, `.4`, `4.3`, `0xFF`, `0xA33FF0E`, `8.7e12`, `8.7e+12`, `8e-12`.
 

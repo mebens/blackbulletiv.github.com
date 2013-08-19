@@ -72,10 +72,10 @@ There's a small example of Lua syntax. Lua doesn't use semicolons, nor curly bra
 
 Like many other interpreted languages, Lua is typeless, meaning that declaring a variable is as simple as `var = value`. This creates the variable _in the global scope_; we'll soon see how to declare local variables. You can also declare multiple variables at once: `var1, var2, var3 = val1, val2, val3`.
 
-There are few constants, or, types, that you should be aware of:
+There are a few constants, or, types, that you should be aware of:
 
 * `nil` is the nothing value, and also represents undefined variables. While languages such as ActionScript have both a `null` and `undefined` value, Lua combines these two things into one with `nil`.
-* `true` and `false` are present. Beware that in conditional statements, the only things that will translate to `false` are `nil` and `false` itself; everything else is considered `true`.
+* `true` and `false` are present. Beware that in conditional statements, the only things that will equate to `false` are `nil` and `false` itself; everything else is considered `true`.
 
 We'll delve more into Lua's native types in [part two](/2012/08/27/lua-for-programmers-part-2).
 
@@ -97,14 +97,14 @@ not   #     - (unary)
 Here are the differences between your standard C-based operator set:
 
 * The logical AND, OR, and NOT operators are the keywords `and`, `or`, and `not`, respectively.
-* The inequality operator is `~=` instead of the standard `!=`.
+* The inequality operator is `~=` instead of `!=`.
 * `..` is the operator for string concatenation.
 * `^` raises a number to a power, for example `10 ^ 2` would yield 100 (or, ten-squared). In most other languages, this performs the binary XOR operation.
 * `#` is an operator used to get the length of tables and strings. We'll see this used in [part two](/2012/08/27/lua-for-programmers-part-2).
 
 If you're wondering where bitwise operators are, there aren't any. However, Lua 5.2 added the [`bit32`](http://lua.org/manual/5.2/manual.html#6.7) library which you can use for bitwise operations. If you're using earlier versions of Lua check out [this page](http://lua-users.org/wiki/BitwiseOperators) for some solutions.
 
-Finally, there are two things to note about assignment. First, compound assignment isn't supported. This means an expression such as `i += 3` needs to be written as `i = i + 3`. Second, the syntax of the assignment operator itself is quite limited. You can't do things like `foo(a = 3)` or `a = b = 1`.
+Finally, there are two things to note about assignment. First, compound assignment isn't supported, thus an expression such as `i += 3` must be written as `i = i + 3`. Second, the syntax of the operator itself is quite limited. You can't do things like `foo(a = 3)` or `a = b = 1`.
 
 ## Loops
 
@@ -134,7 +134,7 @@ repeat
 until i == 1
 {% endhighlight %}  
 
-Repeats its body until the condition is true, and is guaranteed to run the body at least once. Quite like a `do..while` loop.
+Repeats its body _until_ the condition is true, and is guaranteed to run the body at least once. Quite like a `do..while` loop.
 
 ### Numeric `for`
 

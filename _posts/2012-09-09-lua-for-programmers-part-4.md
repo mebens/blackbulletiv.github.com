@@ -76,6 +76,6 @@ print(_G._G == _G) -- true
 
 ### Conclusion
 
-Well, that's it for now. Note that I'll probably add to this collection of "bits and pieces," so to speak, over time. If you've got any suggestions for things that could be added, I'd love hear them.
+Well, that's it for now. If you've got any suggestions for things that could be added, I'd love hear them.
 
-Anyway, thanks for reading the series, I hope it's been of use to you.
+Thanks for reading the series, I hope it's been of use to you.

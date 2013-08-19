@@ -101,7 +101,7 @@ function func(x, y, z)
 end
 {% endhighlight %}
 
-We could also use the `or` operator for brevity:
+A more common method is to use the `or` operator instead:
 
 {% highlight lua %}
 function func(x, y, z)
