@@ -7,7 +7,6 @@ tags:
   - Ludum Dare
   - FlashPunk
   - game development
-  - "Rock 'n' Slash"
   - programming
   - art
 ---
